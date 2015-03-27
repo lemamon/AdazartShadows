@@ -1,0 +1,191 @@
+fileFormatVersion: 2
+guid: 083848650a3d6124293e36f448ad82be
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: cavaleiro andando_0
+    21300002: cavaleiro andando_1
+    21300004: cavaleiro andando_2
+    21300006: cavaleiro andando_3
+    21300008: cavaleiro andando_4
+    21300010: cavaleiro andando_5
+    21300012: cavaleiro andando_6
+    21300014: cavaleiro andando_7
+    21300016: cavaleiro andando_8
+    21300018: cavaleiro andando_9
+    21300020: cavaleiro andando_10
+    21300022: cavaleiro andando_11
+    21300024: Warrior_Walk_0
+    21300026: Warrior_Walk_1
+    21300028: Warrior_Walk_2
+    21300030: Warrior_Walk_3
+    21300032: Warrior_Walk_4
+    21300034: Warrior_Walk_5
+    21300036: Warrior_Walk_6
+    21300038: Warrior_Walk_7
+    21300040: Warrior_Walk_8
+    21300042: Warrior_Walk_9
+    21300044: Warrior_Walk_10
+    21300046: Warrior_Walk_11
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Warrior_Walk_0
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 4090
+        width: 1379
+        height: 1572
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Warrior_Walk_1
+      rect:
+        serializedVersion: 2
+        x: 1879
+        y: 4037
+        width: 1379
+        height: 1596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Warrior_Walk_2
+      rect:
+        serializedVersion: 2
+        x: 3539
+        y: 4018
+        width: 1379
+        height: 1601
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Warrior_Walk_3
+      rect:
+        serializedVersion: 2
+        x: 5219
+        y: 4044
+        width: 1379
+        height: 1595
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Warrior_Walk_4
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 2174
+        width: 1379
+        height: 1608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Warrior_Walk_5
+      rect:
+        serializedVersion: 2
+        x: 1709
+        y: 2135
+        width: 1386
+        height: 1601
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Warrior_Walk_6
+      rect:
+        serializedVersion: 2
+        x: 3376
+        y: 2141
+        width: 1379
+        height: 1576
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Warrior_Walk_7
+      rect:
+        serializedVersion: 2
+        x: 5088
+        y: 2141
+        width: 1379
+        height: 1602
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Warrior_Walk_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 239
+        width: 1376
+        height: 1608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Warrior_Walk_9
+      rect:
+        serializedVersion: 2
+        x: 1814
+        y: 141
+        width: 1379
+        height: 1595
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Warrior_Walk_10
+      rect:
+        serializedVersion: 2
+        x: 3474
+        y: 141
+        width: 1379
+        height: 1595
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Warrior_Walk_11
+      rect:
+        serializedVersion: 2
+        x: 5317
+        y: 0
+        width: 1376
+        height: 1592
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

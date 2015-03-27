@@ -1,0 +1,143 @@
+fileFormatVersion: 2
+guid: 1a73038448728ca4a994e94c96e7dc50
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Archer Walk_0
+    21300002: Archer Walk_1
+    21300004: Archer Walk_2
+    21300006: Archer Walk_3
+    21300008: Archer Walk_4
+    21300010: Archer Walk_5
+    21300012: Archer Walk_6
+    21300014: Archer Walk_7
+    21300016: Archer_Walk_0
+    21300018: Archer_Walk_1
+    21300020: Archer_Walk_2
+    21300022: Archer_Walk_3
+    21300024: Archer_Walk_4
+    21300026: Archer_Walk_5
+    21300028: Archer_Walk_6
+    21300030: Archer_Walk_7
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 2500
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Archer_Walk_0
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 4684
+        width: 1553
+        height: 1626
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Archer_Walk_1
+      rect:
+        serializedVersion: 2
+        x: 2356
+        y: 4703
+        width: 1552
+        height: 1638
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Archer_Walk_2
+      rect:
+        serializedVersion: 2
+        x: 4666
+        y: 4727
+        width: 1552
+        height: 1630
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Archer_Walk_3
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 2362
+        width: 1546
+        height: 1670
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Archer_Walk_4
+      rect:
+        serializedVersion: 2
+        x: 2313
+        y: 2449
+        width: 1552
+        height: 1658
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Archer_Walk_5
+      rect:
+        serializedVersion: 2
+        x: 4790
+        y: 2406
+        width: 1543
+        height: 1669
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Archer_Walk_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 47
+        width: 1543
+        height: 1638
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Archer_Walk_7
+      rect:
+        serializedVersion: 2
+        x: 2431
+        y: 0
+        width: 1546
+        height: 1630
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
