@@ -1,13 +1,15 @@
 fileFormatVersion: 2
-guid: 463d0896cac6f5344b2a644810fe6d02
+guid: 8850f928dc71d10468560938858d2f23
+timeCreated: 1427920412
+licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Warrior Jump_0
-    21300002: Warrior Jump_1
-    21300004: Warrior Jump_2
-    21300006: Warrior Jump_3
-    21300008: Warrior Jump_4
-    21300010: Warrior Jump_5
+    21300000: Jump_0
+    21300002: Jump_1
+    21300004: Jump_2
+    21300006: Jump_3
+    21300008: Jump_4
+    21300010: Jump_5
     21300012: Warrior_Jump_0
     21300014: Warrior_Jump_1
     21300016: Warrior_Jump_2
@@ -17,7 +19,7 @@ TextureImporter:
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 0
+    enableMipMap: 1
     linearTexture: 0
     correctGamma: 0
     fadeOut: 0
@@ -32,16 +34,20 @@ TextureImporter:
   isReadable: 0
   grayScaleToAlpha: 0
   generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
-  textureFormat: -1
+  textureFormat: -3
   maxTextureSize: 1024
   textureSettings:
-    filterMode: -1
-    aniso: 1
+    filterMode: 2
+    aniso: 16
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
   lightmap: 0
+  rGBM: 0
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
@@ -58,62 +64,64 @@ TextureImporter:
     - name: Warrior_Jump_0
       rect:
         serializedVersion: 2
-        x: 204
-        y: 1777
-        width: 1375
-        height: 1577
+        x: 66
+        y: 589
+        width: 460
+        height: 527
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Warrior_Jump_1
       rect:
         serializedVersion: 2
-        x: 1906
-        y: 1801
-        width: 1379
-        height: 1486
+        x: 633
+        y: 597
+        width: 459
+        height: 497
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Warrior_Jump_2
       rect:
         serializedVersion: 2
-        x: 3545
-        y: 1844
-        width: 1377
-        height: 1532
+        x: 1178
+        y: 611
+        width: 458
+        height: 511
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Warrior_Jump_3
       rect:
         serializedVersion: 2
         x: 0
-        y: 99
-        width: 1372
-        height: 1601
+        y: 31
+        width: 458
+        height: 534
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Warrior_Jump_4
       rect:
         serializedVersion: 2
-        x: 1824
-        y: 36
-        width: 1380
-        height: 1601
+        x: 606
+        y: 10
+        width: 459
+        height: 534
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Warrior_Jump_5
       rect:
         serializedVersion: 2
-        x: 3381
+        x: 1122
         y: 0
-        width: 1375
-        height: 1594
+        width: 460
+        height: 530
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
+  assetBundleName: 
+  assetBundleVariant: 

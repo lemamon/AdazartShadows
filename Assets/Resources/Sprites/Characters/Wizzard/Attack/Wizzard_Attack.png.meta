@@ -1,19 +1,15 @@
 fileFormatVersion: 2
-guid: cf2979277afd2ce40ab01805ebd94012
+guid: dd4e8c846cefa2843a3931d5cf9f201d
+timeCreated: 1427920446
+licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Witcher Jump_0
-    21300002: Witcher Jump_1
-    21300004: Witcher Jump_2
-    21300006: Witcher Jump_3
-    21300008: Witcher Jump_4
-    21300010: Witcher Jump_5
-    21300012: Witcher_Jump_0
-    21300014: Witcher_Jump_1
-    21300016: Witcher_Jump_2
-    21300018: Witcher_Jump_3
-    21300020: Witcher_Jump_4
-    21300022: Witcher_Jump_5
+    21300000: Attack_0
+    21300002: Attack_1
+    21300004: Attack_2
+    21300006: Attack_3
+    21300008: Attack_4
+    21300010: Attack_5
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -32,16 +28,20 @@ TextureImporter:
   isReadable: 0
   grayScaleToAlpha: 0
   generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
-  textureFormat: -1
+  textureFormat: -3
   maxTextureSize: 1024
   textureSettings:
-    filterMode: -1
+    filterMode: 2
     aniso: 16
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
   lightmap: 0
+  rGBM: 0
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
@@ -55,65 +55,67 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: Witcher_Jump_0
+    - name: Attack_0
       rect:
         serializedVersion: 2
         x: 0
+        y: 98
+        width: 491
+        height: 959
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Attack_1
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 50
+        width: 551
+        height: 964
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Attack_2
+      rect:
+        serializedVersion: 2
+        x: 1601
+        y: 36
+        width: 452
+        height: 961
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Attack_3
+      rect:
+        serializedVersion: 2
+        x: 2104
+        y: 772
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Attack_4
+      rect:
+        serializedVersion: 2
+        x: 2285
+        y: 56
+        width: 487
+        height: 951
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Attack_5
+      rect:
+        serializedVersion: 2
+        x: 2971
         y: 0
-        width: 1175
-        height: 2073
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Witcher_Jump_1
-      rect:
-        serializedVersion: 2
-        x: 1622
-        y: 125
-        width: 1073
-        height: 2099
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Witcher_Jump_2
-      rect:
-        serializedVersion: 2
-        x: 3081
-        y: 1711
-        width: 15
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Witcher_Jump_3
-      rect:
-        serializedVersion: 2
-        x: 3209
-        y: 79
-        width: 998
-        height: 2123
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Witcher_Jump_4
-      rect:
-        serializedVersion: 2
-        x: 4842
-        y: 117
-        width: 1216
-        height: 2115
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Witcher_Jump_5
-      rect:
-        serializedVersion: 2
-        x: 6656
-        y: 216
-        width: 1085
-        height: 2118
+        width: 535
+        height: 942
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
+  assetBundleName: 
+  assetBundleVariant: 

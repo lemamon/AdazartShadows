@@ -1,19 +1,11 @@
 fileFormatVersion: 2
-guid: f09e81543f31cb44bb56810528e47d04
+guid: 274042cbbdb751a44b16268c0a60585e
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Witcher Walk_0
-    21300002: Witcher Walk_1
-    21300004: Witcher Walk_2
-    21300006: Witcher Walk_3
-    21300008: Witcher Walk_4
-    21300010: Witcher Walk_5
-    21300012: Witcher_Walk_0
-    21300014: Witcher_Walk_1
-    21300016: Witcher_Walk_2
-    21300018: Witcher_Walk_3
-    21300020: Witcher_Walk_4
-    21300022: Witcher_Walk_5
+    21300000: Jump_0
+    21300002: Jump_1
+    21300004: Jump_2
+    21300006: Jump_3
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -32,16 +24,20 @@ TextureImporter:
   isReadable: 0
   grayScaleToAlpha: 0
   generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
-  textureFormat: -1
+  textureFormat: -3
   maxTextureSize: 1024
   textureSettings:
-    filterMode: -1
+    filterMode: 2
     aniso: 16
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
   lightmap: 0
+  rGBM: 0
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
@@ -55,65 +51,47 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: Witcher_Walk_0
+    - name: Jump_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 1178
-        height: 2193
+        y: 23
+        width: 504
+        height: 988
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Witcher_Walk_1
+    - name: Jump_1
       rect:
         serializedVersion: 2
-        x: 1636
-        y: 13
-        width: 1341
-        height: 2178
+        x: 755
+        y: 50
+        width: 571
+        height: 987
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Witcher_Walk_2
+    - name: Jump_2
       rect:
         serializedVersion: 2
-        x: 3470
-        y: 79
-        width: 1304
-        height: 2170
+        x: 1973
+        y: 659
+        width: 6
+        height: 5
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Witcher_Walk_3
+    - name: Jump_3
       rect:
         serializedVersion: 2
-        x: 4904
-        y: 191
-        width: 1313
-        height: 2160
+        x: 2263
+        y: 42
+        width: 534
+        height: 995
       alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Witcher_Walk_4
-      rect:
-        serializedVersion: 2
-        x: 6609
-        y: 219
-        width: 1304
-        height: 2160
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Witcher_Walk_5
-      rect:
-        serializedVersion: 2
-        x: 8201
-        y: 219
-        width: 1337
-        height: 2174
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
+  assetBundleName: 
+  assetBundleVariant: 
