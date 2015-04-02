@@ -7,6 +7,7 @@ public class GenericProjectile : MonoBehaviour
     private GenericEffect _effect;
     private Transform     _father;
     private float         _damage;
+
     public void SetSpeed(float speed)
     {
         _speed = speed;
