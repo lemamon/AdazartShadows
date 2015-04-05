@@ -12,18 +12,18 @@ public class FacadePlayer
     private bool             _isJumping;
     public FacadePlayer()
     {
-        _genericPlayer    = Factory.InstancePlayer(2);
+        _isJumping        = false;
+        _genericPlayer    = Factory.InstancePlayer(1);
         _gameObject       = _genericPlayer.gameObject;
         _rigidbody2D      = _gameObject.GetComponent<Rigidbody2D>();
-        _isJumping        = false;
         _genericAnimator  = new GenericAnimator(_gameObject);
         _genericMovement  = new GenericMovement(_gameObject);
         _controllerPlayer = new ControllerPlayer(_gameObject);
-        // _genericPlayer.SetSpeed(20f);
+        _genericPlayer.SetFacadePlayer(this);
     }
     public void MoveToDirection(int[] directions)//X and Y directions
     {
-        if(/*_genericPlayer.CanMove()*/true)
+        if(_genericPlayer.CanMove())
         {
             switch(directions[0])//just moves X direction
             {
@@ -46,12 +46,15 @@ public class FacadePlayer
     }
     public void Action1(float time, int[] directions)
     {
-        _genericPlayer.Action1(time, directions);
-        _genericAnimator.Play("Attack");
+        string anim = _genericPlayer.Action1(time, directions);
+        anim = "Attack";
+        _genericAnimator.Play(anim);
     }
     public void Action2(float time, int[] directions)
     {
-        _genericPlayer.Action2(time, directions);
+        string anim = _genericPlayer.Action2(time, directions);
+        anim = "Attack";
+        _genericAnimator.Play(anim);
     }
     public void Jump()
     {
@@ -67,5 +70,9 @@ public class FacadePlayer
                 //(Velocity.x,0)
                 _genericMovement.Move(Vector2.right * _rigidbody2D.velocity.x);
             }
+    }
+    public void SwapProjectile(GenericProjectile genericProjectile)
+    {
+        genericProjectile.Spawn();
     }
 }
