@@ -3,14 +3,15 @@ using System.Collections;
 
 public class PlayerWarrior : GenericPlayer
 {
-    public override void Action1(float time, int[] direction)
+    public override string Action1(float time, int[] direction)
     {
-        
+        _facadePlayer.
+        return "ss";
     }
 
-    public override void Action2(float time, int[] direction)
+    public override string Action2(float time, int[] direction)
     {
-        throw new System.NotImplementedException();
+        return "ss";
     }
 
     public override bool CanJump()
