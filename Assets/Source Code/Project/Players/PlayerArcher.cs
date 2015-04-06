@@ -4,21 +4,24 @@ using System.Collections;
 public class PlayerArcher : GenericPlayer
 {
 
-    public override void Action1(float time, int[] direction)
+
+    public override string Action1(float time, int[] direction)
     {
+        throw new System.NotImplementedException();
     }
 
-    public override void Action2(float time, int[] direction)
+    public override string Action2(float time, int[] direction)
     {
+        throw new System.NotImplementedException();
     }
 
     public override bool CanJump()
     {
-        return true;
+        throw new System.NotImplementedException();
     }
 
     public override bool CanMove()
     {
-        return true;
+        throw new System.NotImplementedException();
     }
 }

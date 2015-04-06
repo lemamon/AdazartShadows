@@ -9,32 +9,34 @@ public class Factory
     }
     public static GenericPlayer InstancePlayer(int opt)
     {
-        GameObject chararcters;
+        GameObject character;
         switch(opt)
         {
             case 1:
-                chararcters = GameObject.Instantiate(Resources.Load("Prefabs/Characters/Warrior", typeof(GameObject))) as GameObject;
-                chararcters.name = "Warrior";
-                return chararcters.AddComponent<PlayerWarrior>();
+                character = GameObject.Instantiate(Resources.Load("Prefabs/Characters/Warrior", typeof(GameObject))) as GameObject;
+                character.name = "Warrior";
+                return character.AddComponent<PlayerWarrior>();
             case 2:
-                chararcters = GameObject.Instantiate(Resources.Load("Prefabs/Characters/Archer", typeof(GameObject))) as GameObject;
-                chararcters.name = "Archer";
-                return chararcters.AddComponent<PlayerArcher>();
+                character = GameObject.Instantiate(Resources.Load("Prefabs/Characters/Archer", typeof(GameObject))) as GameObject;
+                character.name = "Archer";
+                return character.AddComponent<PlayerArcher>();
             case 3:
-                chararcters = GameObject.Instantiate(Resources.Load("Prefabs/Characters/Wizzard", typeof(GameObject))) as GameObject;
-                chararcters.name = "Wizzard";
-                return chararcters.AddComponent<PlayerWizzard>();
+                character = GameObject.Instantiate(Resources.Load("Prefabs/Characters/Wizzard", typeof(GameObject))) as GameObject;
+                character.name = "Wizzard";
+                return character.AddComponent<PlayerWizzard>();
             default:
                 return null;
         }
     }
 
-    public static GenericProjectile InstanceEffect(int opt)
+    public static GameObject FindProjectile(int opt)
     {
+        GameObject projectile;
         switch (opt)
         {
             case 1:
-                return null;
+                projectile = Resources.Load("Prefabs/Projectiles/ProjectileSword", typeof(GameObject)) as GameObject;
+                return projectile;
             case 2:
                 return null;
             case 3:

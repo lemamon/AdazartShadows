@@ -4,39 +4,24 @@ using System.Collections;
 
 public class PlayerWizzard : GenericPlayer
 {
-    Timer timer;
-    bool action = false;
 
-    public override void Action1(float time, int[] direction)
+    public override string Action1(float time, int[] direction)
     {
-        
-        if (time > 0)
-            action = false;
-        else
-            action = true;
+        throw new System.NotImplementedException();
     }
 
-    public override void Action2(float time, int[] direction)
+    public override string Action2(float time, int[] direction)
     {
-        if (time > 0)
-            action = false;
-        else
-            action = true;
+        throw new System.NotImplementedException();
     }
 
     public override bool CanJump()
     {
-        if (action)
-            return false;
-        else
-            return true;
+        throw new System.NotImplementedException();
     }
 
     public override bool CanMove()
     {
-        if (action)
-            return false;
-        else
-            return true;
+        throw new System.NotImplementedException();
     }
 }

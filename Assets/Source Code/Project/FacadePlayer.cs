@@ -3,22 +3,26 @@ using System.Collections;
 
 public class FacadePlayer
 {
-    private GenericAnimator  _genericAnimator;
-    private GameObject       _gameObject;
-    private Rigidbody2D      _rigidbody2D;
-    private GenericMovement  _genericMovement;
-    private GenericPlayer    _genericPlayer;
-    private ControllerPlayer _controllerPlayer;
-    private bool             _isJumping;
+    private bool              _isJumping;
+    private ControllerPlayer  _controllerPlayer;
+    private GameObject        _gameObject;
+    private GenericAnimator   _genericAnimator;
+    private GenericMovement   _genericMovement;
+    private GenericPlayer     _genericPlayer;
+    private GameObject        _projectile;
+    private Rigidbody2D       _rigidbody2D;
+    private GenericProjectile teste;
+
     public FacadePlayer()
     {
-        _isJumping        = false;
-        _genericPlayer    = Factory.InstancePlayer(1);
-        _gameObject       = _genericPlayer.gameObject;
-        _rigidbody2D      = _gameObject.GetComponent<Rigidbody2D>();
-        _genericAnimator  = new GenericAnimator(_gameObject);
-        _genericMovement  = new GenericMovement(_gameObject);
-        _controllerPlayer = new ControllerPlayer(_gameObject);
+        _isJumping         = false;
+        _genericPlayer     = Factory.InstancePlayer(1);
+        _projectile        = Factory.FindProjectile(_genericPlayer.GetProjectile());
+        _gameObject        = _genericPlayer.gameObject;
+        _rigidbody2D       = _gameObject.GetComponent<Rigidbody2D>();
+        _genericAnimator   = new GenericAnimator(_gameObject);
+        _genericMovement   = new GenericMovement(_gameObject);
+        _controllerPlayer  = new ControllerPlayer(_gameObject);
         _genericPlayer.SetFacadePlayer(this);
     }
     public void MoveToDirection(int[] directions)//X and Y directions
@@ -58,7 +62,7 @@ public class FacadePlayer
     }
     public void Jump()
     {
-        if (/*_genericPlayer.CanJump() &&*/ _controllerPlayer.IsNoChao())
+        if (_genericPlayer.CanJump() && _controllerPlayer.IsNoChao())
         {
             _genericMovement.Push(Vector2.up*1200);
         }
@@ -71,8 +75,9 @@ public class FacadePlayer
                 _genericMovement.Move(Vector2.right * _rigidbody2D.velocity.x);
             }
     }
-    public void SwapProjectile(GenericProjectile genericProjectile)
+    public void SpawProjectile()
     {
-        genericProjectile.Spawn();
+        Debug.Log(_projectile);
+        _projectile.Spawn(_gameObject.transform.position,_gameObject.transform.rotation);
     }
 }

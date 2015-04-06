@@ -3,9 +3,14 @@ using System.Collections;
 
 public class PlayerWarrior : GenericPlayer
 {
+    void Awake()
+    {
+        _projectile = 1;
+    }
+
     public override string Action1(float time, int[] direction)
     {
-        _facadePlayer.
+        _facadePlayer.SpawProjectile();
         return "ss";
     }
 

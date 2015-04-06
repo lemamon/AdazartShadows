@@ -13,7 +13,7 @@ public class GenericGamepad : MonoBehaviour
         _action1      = new Timer();
         _action2      = new Timer();
         _directions   = new int[2] {0,0};
-        _facadePlayer = new FacadePlayer( );
+        _facadePlayer = new FacadePlayer();
     }
 
     void Update()
@@ -23,7 +23,7 @@ public class GenericGamepad : MonoBehaviour
         {
             //Some action key down?
             if(Input.GetKeyDown(KeyCode.A) || Input.GetButtonDown("Fire1"))
-            {
+            { 
                 _action1.Reset();
                 _directions[0] = DirectionX();
                 _directions[1] = DirectionY();
