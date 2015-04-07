@@ -9,7 +9,7 @@ public abstract class GenericPlayer : MonoBehaviour
 
     void Awake()
     {
-        _speed      = 5f;
+        _speed      = 15;
         _projectile = 1;
     }
 

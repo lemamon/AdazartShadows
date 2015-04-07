@@ -56,30 +56,30 @@ public class GenericGamepad : MonoBehaviour
     }
     private int DirectionX()
     {
-        //if ( Input.GetKey(KeyCode.LeftArrow) && Input.GetKey(KeyCode.RightArrow))
-        //{
-        //    return 0;
-        //}
+        if (Input.GetKey(KeyCode.LeftArrow) && Input.GetKey(KeyCode.RightArrow))
+        {
+            return 0;
+        }
 
-        //if (Input.GetKey(KeyCode.LeftArrow))
-        //    return -1;
-        //else if (Input.GetKey(KeyCode.RightArrow))
-        //    return 1;
+        if (Input.GetKey(KeyCode.LeftArrow))
+            return -1;
+        else if (Input.GetKey(KeyCode.RightArrow))
+            return 1;
 
-        //return 0;
+        return 0;
         return (int) Input.GetAxis("Horizontal");
     }
     private int DirectionY()
     {
-        //if (Input.GetKey(KeyCode.UpArrow) && Input.GetKey(KeyCode.DownArrow))
-        //{
-        //    return 0;
-        //}
-        //if (Input.GetKey(KeyCode.DownArrow))
-        //    return -1;
-        //else if (Input.GetKey(KeyCode.UpArrow))
-        //    return 1;
-        //return 0;
+        if (Input.GetKey(KeyCode.UpArrow) && Input.GetKey(KeyCode.DownArrow))
+        {
+            return 0;
+        }
+        if (Input.GetKey(KeyCode.DownArrow))
+            return -1;
+        else if (Input.GetKey(KeyCode.UpArrow))
+            return 1;
+        return 0;
         return (int)Input.GetAxis("Vertical");
     }
 }

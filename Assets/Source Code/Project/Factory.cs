@@ -38,9 +38,11 @@ public class Factory
                 projectile = Resources.Load("Prefabs/Projectiles/ProjectileSword", typeof(GameObject)) as GameObject;
                 return projectile;
             case 2:
-                return null;
+                projectile = Resources.Load("Prefabs/Projectiles/ProjectileArrow", typeof(GameObject)) as GameObject;
+                return projectile;
             case 3:
-                return null;
+                projectile = Resources.Load("Prefabs/Projectiles/ProjectileOrb", typeof(GameObject)) as GameObject;
+                return projectile;
             default:
                 return null;
         }

@@ -3,8 +3,11 @@ using System.Collections;
 
 public class PlayerWarrior : GenericPlayer
 {
+
+
     void Awake()
     {
+        _speed      = 20f;
         _projectile = 1;
     }
 

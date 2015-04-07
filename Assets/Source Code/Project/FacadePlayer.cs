@@ -11,12 +11,11 @@ public class FacadePlayer
     private GenericPlayer     _genericPlayer;
     private GameObject        _projectile;
     private Rigidbody2D       _rigidbody2D;
-    private GenericProjectile teste;
 
     public FacadePlayer()
     {
         _isJumping         = false;
-        _genericPlayer     = Factory.InstancePlayer(1);
+        _genericPlayer     = Factory.InstancePlayer(2);
         _projectile        = Factory.FindProjectile(_genericPlayer.GetProjectile());
         _gameObject        = _genericPlayer.gameObject;
         _rigidbody2D       = _gameObject.GetComponent<Rigidbody2D>();
@@ -37,6 +36,7 @@ public class FacadePlayer
                     _genericAnimator.IsFacedRight(false);
                     break;
                 case  1://Right
+                    Debug.Log(_genericPlayer.GetSpeed());
                     _genericMovement.Move(new Vector2(_genericPlayer.GetSpeed(), _rigidbody2D.velocity.y));
                     _genericAnimator.Play("Walk");
                     _genericAnimator.IsFacedRight(true);
@@ -64,7 +64,8 @@ public class FacadePlayer
     {
         if (_genericPlayer.CanJump() && _controllerPlayer.IsNoChao())
         {
-            _genericMovement.Push(Vector2.up*1200);
+            _genericAnimator.Play("Jump");
+            _genericMovement.Push(Vector2.up*6000);
         }
     }
     public void JumpOut()
@@ -77,7 +78,6 @@ public class FacadePlayer
     }
     public void SpawProjectile()
     {
-        Debug.Log(_projectile);
         _projectile.Spawn(_gameObject.transform.position,_gameObject.transform.rotation);
     }
 }
