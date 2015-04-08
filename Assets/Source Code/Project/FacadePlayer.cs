@@ -15,7 +15,7 @@ public class FacadePlayer
     public FacadePlayer()
     {
         _isJumping         = false;
-        _genericPlayer     = Factory.InstancePlayer(2);
+        _genericPlayer     = Factory.InstancePlayer(1);
         _projectile        = Factory.FindProjectile(_genericPlayer.GetProjectile());
         _gameObject        = _genericPlayer.gameObject;
         _rigidbody2D       = _gameObject.GetComponent<Rigidbody2D>();
@@ -36,7 +36,6 @@ public class FacadePlayer
                     _genericAnimator.IsFacedRight(false);
                     break;
                 case  1://Right
-                    Debug.Log(_genericPlayer.GetSpeed());
                     _genericMovement.Move(new Vector2(_genericPlayer.GetSpeed(), _rigidbody2D.velocity.y));
                     _genericAnimator.Play("Walk");
                     _genericAnimator.IsFacedRight(true);
