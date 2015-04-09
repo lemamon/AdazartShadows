@@ -1,11 +1,17 @@
 fileFormatVersion: 2
 guid: 274042cbbdb751a44b16268c0a60585e
+timeCreated: 1428608137
+licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
     21300000: Jump_0
     21300002: Jump_1
     21300004: Jump_2
     21300006: Jump_3
+    21300008: Wizzard_Jump_0
+    21300010: Wizzard_Jump_1
+    21300012: Wizzard_Jump_2
+    21300014: Wizzard_Jump_3
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -29,7 +35,7 @@ TextureImporter:
   cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
   textureFormat: -3
-  maxTextureSize: 1024
+  maxTextureSize: 2048
   textureSettings:
     filterMode: 2
     aniso: 16
@@ -51,45 +57,45 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: Jump_0
+    - name: Wizzard_Jump_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 23
-        width: 504
-        height: 988
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Jump_1
-      rect:
-        serializedVersion: 2
-        x: 755
-        y: 50
-        width: 571
+        y: 24
+        width: 502
         height: 987
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Jump_2
+    - name: Wizzard_Jump_1
       rect:
         serializedVersion: 2
-        x: 1973
-        y: 659
-        width: 6
-        height: 5
+        x: 756
+        y: 51
+        width: 569
+        height: 986
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Jump_3
+    - name: Wizzard_Jump_3
       rect:
         serializedVersion: 2
-        x: 2263
+        x: 2262
         y: 42
-        width: 534
+        width: 535
         height: 995
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Wizzard_Jump_2
+      rect:
+        serializedVersion: 2
+        x: 1501
+        y: 2
+        width: 569
+        height: 986
+      alignment: 0
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

@@ -17,7 +17,9 @@ public class GenericAnimator
 
     public void Play(string animation)
     {
-        _animator.Play(_name+"_"+animation);
+        //_animator.Play(_name+"_"+animation);
+        if(!_animator.GetCurrentAnimatorStateInfo(0).IsName(_name + "_" + animation))
+            _animator.SetTrigger(animation);
     }
 
     public void IsFacedRight(bool isFacedRight)
