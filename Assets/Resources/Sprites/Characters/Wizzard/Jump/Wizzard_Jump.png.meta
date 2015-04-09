@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 274042cbbdb751a44b16268c0a60585e
-timeCreated: 1428444508
+timeCreated: 1428608137
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -65,7 +65,7 @@ TextureImporter:
         width: 502
         height: 987
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Wizzard_Jump_1
       rect:
@@ -75,17 +75,7 @@ TextureImporter:
         width: 569
         height: 986
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Wizzard_Jump_2
-      rect:
-        serializedVersion: 2
-        x: 1975
-        y: 659
-        width: 5
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Wizzard_Jump_3
       rect:
@@ -95,7 +85,17 @@ TextureImporter:
         width: 535
         height: 995
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Wizzard_Jump_2
+      rect:
+        serializedVersion: 2
+        x: 1501
+        y: 2
+        width: 569
+        height: 986
+      alignment: 0
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

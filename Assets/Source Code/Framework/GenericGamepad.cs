@@ -34,12 +34,12 @@ public class GenericGamepad : MonoBehaviour
             {
                 _action2.Reset();
             }
-            if (/*Input.GetKeyDown(KeyCode.Space) ||*/ Input.GetButtonDown(_player + "_" + "Fire3"))
+            if (/*Input.GetKeyDown(KeyCode.Space) ||*/ Input.GetButtonDown(_player + "_" + "Jump"))
             {
                 _facadePlayer.Jump();
             }
         }
-        if (/* Input.GetKeyUp(KeyCode.Space) ||*/ Input.GetButtonUp(_player + "_" + "Fire3"))
+        if (/* Input.GetKeyUp(KeyCode.Space) ||*/ Input.GetButtonUp(_player + "_" + "Jump"))
         {
             _facadePlayer.JumpOut();
         }

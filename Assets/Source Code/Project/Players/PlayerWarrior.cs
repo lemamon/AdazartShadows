@@ -8,7 +8,7 @@ public class PlayerWarrior : GenericPlayer
     void Awake()
     {
         _speed      = 20f;
-        _projectile = 1;
+        _projectile = 2;
     }
 
     public override string Action1(float time, int[] direction)
