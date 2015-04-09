@@ -5,7 +5,7 @@ public class PlayerWarrior : GenericPlayer
 {
     public override string Action1(float time, int[] direction)
     {
-        _facadePlayer.
+       
         return "ss";
     }
 
