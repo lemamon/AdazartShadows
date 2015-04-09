@@ -13,15 +13,8 @@ public class PlayerWarrior : GenericPlayer
 
     public override string Action1(float time, int[] direction)
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-       
-=======
         _facadePlayer.SpawProjectile();
->>>>>>> 6ae659ca51b157db1445309c7d5bb0f33cda1615
-=======
-        
->>>>>>> Lahis
+
         return "ss";
     }
 
