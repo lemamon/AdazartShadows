@@ -1,5 +1,7 @@
 fileFormatVersion: 2
 guid: b9710776693eafc46a27e7ca2a8c3616
+timeCreated: 1428444492
+licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
     21300000: Walk_0
@@ -8,6 +10,12 @@ TextureImporter:
     21300006: Walk_3
     21300008: Walk_4
     21300010: Walk_5
+    21300012: Wizzard_Walk_0
+    21300014: Wizzard_Walk_1
+    21300016: Wizzard_Walk_2
+    21300018: Wizzard_Walk_3
+    21300020: Wizzard_Walk_4
+    21300022: Wizzard_Walk_5
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -31,7 +39,7 @@ TextureImporter:
   cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
   textureFormat: -3
-  maxTextureSize: 1024
+  maxTextureSize: 2048
   textureSettings:
     filterMode: 2
     aniso: 16
@@ -53,63 +61,63 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: Walk_0
+    - name: Wizzard_Walk_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 99
-        width: 609
-        height: 985
+        y: 98
+        width: 606
+        height: 986
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Walk_1
+    - name: Wizzard_Walk_1
       rect:
         serializedVersion: 2
-        x: 728
-        y: 95
-        width: 599
-        height: 983
+        x: 731
+        y: 98
+        width: 595
+        height: 981
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Walk_2
+    - name: Wizzard_Walk_2
       rect:
         serializedVersion: 2
-        x: 1504
-        y: 86
+        x: 1503
+        y: 88
+        width: 597
+        height: 978
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Wizzard_Walk_3
+      rect:
+        serializedVersion: 2
+        x: 2155
+        y: 39
         width: 595
         height: 979
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Walk_3
+    - name: Wizzard_Walk_4
       rect:
         serializedVersion: 2
-        x: 2154
-        y: 36
-        width: 595
-        height: 983
+        x: 2967
+        y: 1
+        width: 609
+        height: 989
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Walk_4
+    - name: Wizzard_Walk_5
       rect:
         serializedVersion: 2
-        x: 2968
-        y: 2
-        width: 607
-        height: 987
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Walk_5
-      rect:
-        serializedVersion: 2
-        x: 3786
+        x: 3787
         y: 0
-        width: 534
-        height: 993
+        width: 533
+        height: 994
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

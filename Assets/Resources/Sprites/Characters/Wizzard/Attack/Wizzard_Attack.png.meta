@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: dd4e8c846cefa2843a3931d5cf9f201d
-timeCreated: 1427920446
+timeCreated: 1428444528
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -10,6 +10,11 @@ TextureImporter:
     21300006: Attack_3
     21300008: Attack_4
     21300010: Attack_5
+    21300012: Wizzard_Attack_0
+    21300014: Wizzard_Attack_1
+    21300016: Wizzard_Attack_2
+    21300018: Wizzard_Attack_3
+    21300020: Wizzard_Attack_4
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -33,7 +38,7 @@ TextureImporter:
   cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
   textureFormat: -3
-  maxTextureSize: 1024
+  maxTextureSize: 2048
   textureSettings:
     filterMode: 2
     aniso: 16
@@ -55,63 +60,53 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: Attack_0
+    - name: Wizzard_Attack_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 98
-        width: 491
-        height: 959
+        y: 99
+        width: 489
+        height: 958
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Attack_1
+    - name: Wizzard_Attack_1
       rect:
         serializedVersion: 2
-        x: 762
-        y: 50
-        width: 551
-        height: 964
+        x: 764
+        y: 52
+        width: 550
+        height: 960
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Attack_2
+    - name: Wizzard_Attack_2
       rect:
         serializedVersion: 2
-        x: 1601
-        y: 36
-        width: 452
+        x: 1602
+        y: 37
+        width: 508
         height: 961
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Attack_3
+    - name: Wizzard_Attack_3
       rect:
         serializedVersion: 2
-        x: 2104
-        y: 772
-        width: 7
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Attack_4
-      rect:
-        serializedVersion: 2
-        x: 2285
-        y: 56
-        width: 487
+        x: 2286
+        y: 57
+        width: 486
         height: 951
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Attack_5
+    - name: Wizzard_Attack_4
       rect:
         serializedVersion: 2
-        x: 2971
+        x: 2973
         y: 0
-        width: 535
-        height: 942
+        width: 533
+        height: 941
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

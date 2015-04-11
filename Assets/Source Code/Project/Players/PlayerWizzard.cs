@@ -9,13 +9,11 @@ public class PlayerWizzard : GenericPlayer
 
     public override string Action1(float time, int[] direction)
     {
-        
         if (time > 0)
             action = false;
         else
             action = true;
-
-        return null;
+        return "ss";
     }
 
     public override string Action2(float time, int[] direction)
@@ -24,23 +22,16 @@ public class PlayerWizzard : GenericPlayer
             action = false;
         else
             action = true;
-
-        return null;
+        return "ss";
     }
 
     public override bool CanJump()
     {
-        if (action)
-            return false;
-        else
-            return true;
+        return true;
     }
 
     public override bool CanMove()
     {
-        if (action)
-            return false;
-        else
-            return true;
+        return true;
     }
 }
