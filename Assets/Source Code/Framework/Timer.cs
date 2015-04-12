@@ -10,6 +10,11 @@ using System.Collections;
         _time = Time.time;
     }
 
+    public Timer(float time)
+    {
+        _time = Time.time + time;
+    }
+
     public void Reset()
     {
         _time = Time.time;

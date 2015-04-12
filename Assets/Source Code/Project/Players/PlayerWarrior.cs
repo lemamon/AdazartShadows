@@ -3,18 +3,24 @@ using System.Collections;
 
 public class PlayerWarrior : GenericPlayer
 {
-
+    private Timer _canAttack;
 
     void Awake()
     {
         _speed      = 20f;
-        _projectile = 2;
+        _projectile = 1;
+        _canAttack  = new Timer(0.5f);
     }
 
     public override string Action1(float time, int[] direction)
     {
-        _facadePlayer.SpawProjectile();
-        return "ss";
+        if (_canAttack.GetTime() > 0.5f)
+        {
+            _facadePlayer.SpawProjectile(new Vector2(direction[0], direction[1]));
+            _canAttack.Reset();
+            return "Attack";
+        }
+        return null;
     }
 
     public override string Action2(float time, int[] direction)

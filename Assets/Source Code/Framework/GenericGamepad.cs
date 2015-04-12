@@ -7,7 +7,7 @@ public class GenericGamepad : MonoBehaviour
     private Timer        _action2;
     private int[]        _directions;
     private FacadePlayer _facadePlayer;
-    public string _player;//<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+    public string        _player;//<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
     void Awake()
     {
@@ -22,6 +22,7 @@ public class GenericGamepad : MonoBehaviour
         //Some key down?
         if(Input.anyKeyDown)
         {
+            Debug.Log(_player + " " + Input.GetButtonDown(_player + "_" + "Jump"));
             //Some action key down?
             if (/*Input.GetKeyDown(KeyCode.A) ||*/ Input.GetButtonDown(_player + "_" + "Fire1"))
             { 
