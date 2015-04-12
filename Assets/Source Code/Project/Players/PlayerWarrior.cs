@@ -14,6 +14,7 @@ public class PlayerWarrior : GenericPlayer
 
     public override string Action1(float time, int[] direction)
     {
+<<<<<<< HEAD
         if (_canAttack.GetTime() > 0.5f)
         {
             _facadePlayer.SpawProjectile(new Vector2(direction[0], direction[1]));
@@ -21,6 +22,11 @@ public class PlayerWarrior : GenericPlayer
             return "Attack";
         }
         return null;
+=======
+        _facadePlayer.SpawProjectile();
+
+        return "ss";
+>>>>>>> a53ff44389e4094ba258f241d309362bf99c5a3f
     }
 
     public override string Action2(float time, int[] direction)
