@@ -13,7 +13,7 @@ public class FacadePlayer
     public FacadePlayer()
     {
         _isJumping        = false;
-        _genericPlayer    = Factory.InstancePlayer(1);
+        _genericPlayer    = Factory.InstancePlayer(2);
         _gameObject       = _genericPlayer.gameObject;
         _rigidbody2D      = _gameObject.GetComponent<Rigidbody2D>();
         _genericAnimator  = new GenericAnimator(_gameObject);
