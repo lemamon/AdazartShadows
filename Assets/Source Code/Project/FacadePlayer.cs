@@ -14,6 +14,7 @@ public class FacadePlayer
 
     public FacadePlayer()
     {
+<<<<<<< HEAD
         _isJumping         = false;
         _genericPlayer     = Factory.InstancePlayer(1);
         _projectile        = Factory.FindProjectile(_genericPlayer.GetProjectile());
@@ -22,6 +23,15 @@ public class FacadePlayer
         _genericAnimator   = new GenericAnimator(_gameObject);
         _genericMovement   = new GenericMovement(_gameObject);
         _controllerPlayer  = new ControllerPlayer(_gameObject);
+=======
+        _isJumping        = false;
+        _genericPlayer    = Factory.InstancePlayer(2);
+        _gameObject       = _genericPlayer.gameObject;
+        _rigidbody2D      = _gameObject.GetComponent<Rigidbody2D>();
+        _genericAnimator  = new GenericAnimator(_gameObject);
+        _genericMovement  = new GenericMovement(_gameObject);
+        _controllerPlayer = new ControllerPlayer(_gameObject);
+>>>>>>> Lahis
         _genericPlayer.SetFacadePlayer(this);
     }
     public void MoveToDirection(int[] directions)//X and Y directions
