@@ -4,11 +4,12 @@ using System.Collections;
 public class PlayerWarrior : GenericPlayer
 {
     private Timer _canAttack;
+    private string _status;
 
     void Awake()
     {
         _speed      = 20f;
-        _projectile = 1;
+        _projectile = 2;
         _canAttack  = new Timer(0.5f);
     }
 
@@ -21,6 +22,19 @@ public class PlayerWarrior : GenericPlayer
             return "Attack";
         }
         return null;
+    }
+
+    void OnTriggerEnter2D(Collider2D c)
+    {
+        if (_status != "Dead")
+        {
+            if (c.CompareTag("Projectile") && c.GetComponent<GenericProjectile>().GetPlayer() != _facadePlayer.GetPlayer())
+            {
+                _status = "Dead";
+                _facadePlayer.Kill();
+                Destroy(gameObject);
+            }
+        }
     }
 
     public override string Action2(float time, int[] direction)

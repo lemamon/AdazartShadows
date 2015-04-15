@@ -3,6 +3,7 @@ using System.Collections;
 
 public class ProjectileSword : GenericProjectile
 {
+
     public void OnEnable()
     {
         Invoke("Kill", 0.2f);
@@ -13,7 +14,8 @@ public class ProjectileSword : GenericProjectile
         gameObject.Recycle();
     }
 
-    public override void SetOnLived(Vector2 direction)
+    public override void SetOnLived(Vector2 direction, string player)
     {
+        _player = player;
     }
 }
