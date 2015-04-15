@@ -3,7 +3,6 @@ using System.Collections;
 
 public class FacadePlayer
 {
-    private bool              _isJumping;
     private ControllerPlayer  _controllerPlayer;
     private GameObject        _gameObject;
     private GenericAnimator   _genericAnimator;
@@ -14,7 +13,6 @@ public class FacadePlayer
 
     public FacadePlayer()
     {
-        _isJumping         = false;
         _genericPlayer     = Factory.InstancePlayer(1);
         _projectile        = Factory.FindProjectile(_genericPlayer.GetProjectile());
         _gameObject        = _genericPlayer.gameObject;
