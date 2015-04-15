@@ -7,7 +7,7 @@ public class GenericGamepad : MonoBehaviour
     private Timer        _action2;
     private int[]        _directions;
     private FacadePlayer _facadePlayer;
-    public string _player;//<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+    public string _player;
 
     void Awake()
     {
