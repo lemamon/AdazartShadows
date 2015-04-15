@@ -3,17 +3,10 @@ using System.Collections;
 
 public abstract class GenericProjectile : MonoBehaviour 
 {
-    protected float         _speed;
+    protected float         _damage;
     protected GenericEffect _effect;
     protected Transform     _father;
-    protected float         _damage;
+    protected float         _speed;
 
-    public void SetSpeed(float speed)
-    {
-        _speed = speed;
-    }
-    public float GetSpeed()
-    {
-        return _speed;
-    }
+    public abstract void SetOnLived(Vector2 direction);
 }

@@ -6,7 +6,7 @@ public class PlayerArcher : GenericPlayer
 
     public override string Action1(float time, int[] direction)
     {
-        return "ss";
+        return "Attack";
     }
 
     public override string Action2(float time, int[] direction)
