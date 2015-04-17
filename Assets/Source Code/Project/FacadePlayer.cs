@@ -3,7 +3,6 @@ using System.Collections;
 
 public class FacadePlayer
 {
-    private bool              _isJumping;
     private ControllerPlayer  _controllerPlayer;
     private GameObject        _gameObject;
     private GenericAnimator   _genericAnimator;
@@ -11,10 +10,10 @@ public class FacadePlayer
     private GenericPlayer     _genericPlayer;
     private GameObject        _projectile;
     private Rigidbody2D       _rigidbody2D;
+    private string            _player;
 
-    public FacadePlayer()
+    public FacadePlayer(string player)//<<<<<<<<<<<<<<<<<<<<<<
     {
-        _isJumping         = false;
         _genericPlayer     = Factory.InstancePlayer(1);
         _projectile        = Factory.FindProjectile(_genericPlayer.GetProjectile());
         _gameObject        = _genericPlayer.gameObject;
@@ -22,6 +21,7 @@ public class FacadePlayer
         _genericAnimator   = new GenericAnimator(_gameObject);
         _genericMovement   = new GenericMovement(_gameObject);
         _controllerPlayer  = new ControllerPlayer(_gameObject);
+        _player            = player;
 
         _genericPlayer.SetFacadePlayer(this);
     }
@@ -81,6 +81,18 @@ public class FacadePlayer
     public void SpawProjectile(Vector2 direction)
     {
         GameObject projectile = _projectile.Spawn(_gameObject.transform.position,_gameObject.transform.rotation);
-        projectile.GetComponent<GenericProjectile>().SetOnLived(direction);
+        projectile.GetComponent<GenericProjectile>().SetOnLived(direction,_player);
+    }
+
+    public string GetPlayer()
+    {
+        return _player;
+    }
+
+    public void Kill()
+    {
+        _genericAnimator.Play("Dead");
+        _genericMovement.Move(new Vector2(0, 0));
+        _genericPlayer.enabled = false;
     }
 }

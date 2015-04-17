@@ -13,8 +13,9 @@ public class ProjectileArrow : GenericProjectile
         GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
     }
 
-    public override void SetOnLived(Vector2 direction)
+    public override void SetOnLived(Vector2 direction, string player)
     {
+        _player = player;
         GetComponent<Rigidbody2D>().velocity = direction*_speed;
     }
 
