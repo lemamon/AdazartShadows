@@ -10,8 +10,9 @@ public class FacadePlayer
     private GenericPlayer     _genericPlayer;
     private GameObject        _projectile;
     private Rigidbody2D       _rigidbody2D;
+    private string            _player;
 
-    public FacadePlayer()
+    public FacadePlayer(string player)//<<<<<<<<<<<<<<<<<<<<<<
     {
         _genericPlayer     = Factory.InstancePlayer(1);
         _projectile        = Factory.FindProjectile(_genericPlayer.GetProjectile());
@@ -20,6 +21,8 @@ public class FacadePlayer
         _genericAnimator   = new GenericAnimator(_gameObject);
         _genericMovement   = new GenericMovement(_gameObject);
         _controllerPlayer  = new ControllerPlayer(_gameObject);
+        _player            = player;
+
         _genericPlayer.SetFacadePlayer(this);
     }
     public void MoveToDirection(int[] directions)//X and Y directions
@@ -30,13 +33,15 @@ public class FacadePlayer
             {
                 case -1://Left
                     _genericMovement.Move(new Vector2(-_genericPlayer.GetSpeed(), _rigidbody2D.velocity.y));
-                    _genericAnimator.Play("Walk");
                     _genericAnimator.IsFacedRight(false);
+                    if (_controllerPlayer.IsGrounded())
+                        _genericAnimator.Play("Walk");
                     break;
                 case  1://Right
                     _genericMovement.Move(new Vector2(_genericPlayer.GetSpeed(), _rigidbody2D.velocity.y));
-                    _genericAnimator.Play("Walk");
                     _genericAnimator.IsFacedRight(true);
+                    if (_controllerPlayer.IsGrounded())
+                        _genericAnimator.Play("Walk");
                     break;
                 default://Both or Neither
                     _genericMovement.Move(new Vector2(0, _rigidbody2D.velocity.y));
@@ -48,8 +53,8 @@ public class FacadePlayer
     public void Action1(float time, int[] directions)
     {
         string anim = _genericPlayer.Action1(time, directions);
-        anim = "Attack";
         _genericAnimator.Play(anim);
+
     }
     public void Action2(float time, int[] directions)
     {
@@ -59,7 +64,7 @@ public class FacadePlayer
     }
     public void Jump()
     {
-        if (_genericPlayer.CanJump() && _controllerPlayer.IsNoChao())
+        if (_genericPlayer.CanJump() && _controllerPlayer.IsGrounded())
         {
             _genericAnimator.Play("Jump");
             _genericMovement.Push(Vector2.up*6000);
@@ -73,8 +78,21 @@ public class FacadePlayer
                 _genericMovement.Move(Vector2.right * _rigidbody2D.velocity.x);
             }
     }
-    public void SpawProjectile()
+    public void SpawProjectile(Vector2 direction)
     {
-        _projectile.Spawn(_gameObject.transform.position,_gameObject.transform.rotation);
+        GameObject projectile = _projectile.Spawn(_gameObject.transform.position,_gameObject.transform.rotation);
+        projectile.GetComponent<GenericProjectile>().SetOnLived(direction,_player);
+    }
+
+    public string GetPlayer()
+    {
+        return _player;
+    }
+
+    public void Kill()
+    {
+        _genericAnimator.Play("Dead");
+        _genericMovement.Move(new Vector2(0, 0));
+        _genericPlayer.enabled = false;
     }
 }

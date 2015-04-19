@@ -5,12 +5,18 @@ public class ProjectileArrow : GenericProjectile
 {
     public void OnEnable()
     {
-        GetComponent<Rigidbody2D>().velocity = new Vector2(20, 0);
+        _speed = 35;
     }
 
     public void OnDisable()
     {
         GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+    }
+
+    public override void SetOnLived(Vector2 direction, string player)
+    {
+        _player = player;
+        GetComponent<Rigidbody2D>().velocity = direction*_speed;
     }
 
     void OnTriggerEnter2D(Collider2D c)
@@ -25,4 +31,5 @@ public class ProjectileArrow : GenericProjectile
     {
         gameObject.Recycle();
     }
+
 }
