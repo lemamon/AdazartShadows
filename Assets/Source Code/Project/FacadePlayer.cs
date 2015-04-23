@@ -14,7 +14,7 @@ public class FacadePlayer
 
     public FacadePlayer(string player)//<<<<<<<<<<<<<<<<<<<<<<
     {
-        _genericPlayer     = Factory.InstancePlayer(1);
+        _genericPlayer     = Factory.InstancePlayer(2);
         _projectile        = Factory.FindProjectile(_genericPlayer.GetProjectile());
         _gameObject        = _genericPlayer.gameObject;
         _rigidbody2D       = _gameObject.GetComponent<Rigidbody2D>();
@@ -81,6 +81,8 @@ public class FacadePlayer
     public void SpawProjectile(Vector2 direction)
     {
         GameObject projectile = _projectile.Spawn(_gameObject.transform.position,_gameObject.transform.rotation);
+        if (_gameObject.transform.localScale.x == -1)
+            projectile.transform.localScale = new Vector3(-1, 1, 1);
         projectile.GetComponent<GenericProjectile>().SetOnLived(direction,_player);
     }
 

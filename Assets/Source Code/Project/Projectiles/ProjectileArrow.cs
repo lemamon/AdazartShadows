@@ -5,7 +5,7 @@ public class ProjectileArrow : GenericProjectile
 {
     public void OnEnable()
     {
-        _speed = 35;
+        _speed = 60;
     }
 
     public void OnDisable()
