@@ -15,7 +15,7 @@ public class FacadePlayer
     public FacadePlayer()
     {
         _isJumping         = false;
-        _genericPlayer     = Factory.InstancePlayer(1);
+        _genericPlayer     = Factory.InstancePlayer(3);
         _projectile        = Factory.FindProjectile(_genericPlayer.GetProjectile());
         _gameObject        = _genericPlayer.gameObject;
         _rigidbody2D       = _gameObject.GetComponent<Rigidbody2D>();

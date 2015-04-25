@@ -4,16 +4,30 @@ using System.Collections;
 
 public class PlayerWizzard : GenericPlayer
 {
-    Timer timer;
-    bool action = false;
+    private Timer timer;
+    private bool  action = true;
+    
+    void Awake()
+    {
+        _projectile = 2;
+        _speed = 20;
+    }
 
     public override string Action1(float time, int[] direction)
     {
+        Debug.Log(time);
         if (time > 0)
-            action = false;
-        else
+        {
+            
+            if (time > 2) time = 2;
+            _facadePlayer.SpawProjectile(new Vector2(direction[0] * (time * 50), direction[1]) * (time * 50));
             action = true;
-        return "ss";
+            return null;//anim atack
+        }
+        else
+        {
+            return null;//anim load
+        }
     }
 
     public override string Action2(float time, int[] direction)
@@ -27,11 +41,19 @@ public class PlayerWizzard : GenericPlayer
 
     public override bool CanJump()
     {
-        return true;
+        return action;
     }
 
     public override bool CanMove()
     {
-        return true;
+        return action;
+    }
+
+    void OnCollisionEnter2D(Collision2D c)
+    {
+        if (c.gameObject.tag == "")
+        {
+            gameObject.SetActive(false);
+        }
     }
 }
