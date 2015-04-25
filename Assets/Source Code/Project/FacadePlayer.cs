@@ -3,7 +3,6 @@ using System.Collections;
 
 public class FacadePlayer
 {
-    private bool              _isJumping;
     private ControllerPlayer  _controllerPlayer;
     private GameObject        _gameObject;
     private GenericAnimator   _genericAnimator;
@@ -11,17 +10,18 @@ public class FacadePlayer
     private GenericPlayer     _genericPlayer;
     private GameObject        _projectile;
     private Rigidbody2D       _rigidbody2D;
+    private string            _player;
 
     public FacadePlayer()
     {
-        _isJumping         = false;
-        _genericPlayer     = Factory.InstancePlayer(3);
+        _genericPlayer     = Factory.InstancePlayer(2);
         _projectile        = Factory.FindProjectile(_genericPlayer.GetProjectile());
         _gameObject        = _genericPlayer.gameObject;
         _rigidbody2D       = _gameObject.GetComponent<Rigidbody2D>();
         _genericAnimator   = new GenericAnimator(_gameObject);
         _genericMovement   = new GenericMovement(_gameObject);
         _controllerPlayer  = new ControllerPlayer(_gameObject);
+        _player            = player;
 
         _genericPlayer.SetFacadePlayer(this);
     }
@@ -81,6 +81,20 @@ public class FacadePlayer
     public void SpawProjectile(Vector2 direction)
     {
         GameObject projectile = _projectile.Spawn(_gameObject.transform.position,_gameObject.transform.rotation);
-        projectile.GetComponent<GenericProjectile>().SetOnLived(direction);
+        if (_gameObject.transform.localScale.x == -1)
+            projectile.transform.localScale = new Vector3(-1, 1, 1);
+        projectile.GetComponent<GenericProjectile>().SetOnLived(direction,_player);
+    }
+
+    public string GetPlayer()
+    {
+        return _player;
+    }
+
+    public void Kill()
+    {
+        _genericAnimator.Play("Dead");
+        _genericMovement.Move(new Vector2(0, 0));
+        _genericPlayer.enabled = false;
     }
 }
