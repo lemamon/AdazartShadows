@@ -47,8 +47,8 @@ public class GenericGamepad : MonoBehaviour
         _directions[0] = DirectionX();
         _directions[1] = DirectionY();
         _facadePlayer.MoveToDirection(_directions);
-        if(Input.GetKeyUp(KeyCode.A))
-            Debug.Log(_action1.GetTime());
+        if (Input.GetButtonUp(_player + "_" + "Fire1"))
+            _facadePlayer.Action1(_action1.GetTime(), _directions);
         if(Input.GetKeyUp(KeyCode.B))
             Debug.Log(_action2.GetTime());
     }
