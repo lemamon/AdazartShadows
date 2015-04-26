@@ -12,9 +12,9 @@ public class FacadePlayer
     private Rigidbody2D       _rigidbody2D;
     private string            _player;
 
-    public FacadePlayer(string player)//<<<<<<<<<<<<<<<<<<<<<<
+    public FacadePlayer(string player, int aux)//<<<<<<<<<<<<<<<<<<<<<<
     {
-        _genericPlayer     = Factory.InstancePlayer(2);
+        _genericPlayer     = Factory.InstancePlayer(aux);
         _projectile        = Factory.FindProjectile(_genericPlayer.GetProjectile());
         _gameObject        = _genericPlayer.gameObject;
         _rigidbody2D       = _gameObject.GetComponent<Rigidbody2D>();
@@ -80,10 +80,30 @@ public class FacadePlayer
     }
     public void SpawProjectile(Vector2 direction)
     {
-        GameObject projectile = _projectile.Spawn(_gameObject.transform.position,_gameObject.transform.rotation);
-        if (_gameObject.transform.localScale.x == -1)
-            projectile.transform.localScale = new Vector3(-1, 1, 1);
+
+        GameObject projectile = _projectile.Spawn(_gameObject.transform.position, _gameObject.transform.rotation);
+        #region Gambiarra
+        //Gambiarra show Vou corrigir isso algum dia. prometo
+        float aux = 0;
+        float auy = 0;
+        if (direction.y != 0)
+        {
+            if (direction.y == 1)
+                auy = 90;
+            else if (direction.y == -1)
+                auy = 270;
+            aux = 45 * direction.x * direction.y;
+            auy -= aux;
+        }
+        else if (direction.x == -1)
+        {
+            auy = 180;
+        }
+        projectile.transform.eulerAngles = new Vector3(0, 0, auy);
+        //Gambiarra show
+        #endregion Gambiarra
         projectile.GetComponent<GenericProjectile>().SetOnLived(direction,_player);
+
     }
 
     public string GetPlayer()
@@ -95,6 +115,6 @@ public class FacadePlayer
     {
         _genericAnimator.Play("Dead");
         _genericMovement.Move(new Vector2(0, 0));
-        _genericPlayer.enabled = false;
+        _gameObject.SetActive(false);
     }
 }

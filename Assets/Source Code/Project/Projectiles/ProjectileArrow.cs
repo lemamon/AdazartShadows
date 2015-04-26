@@ -6,6 +6,7 @@ public class ProjectileArrow : GenericProjectile
     public void OnEnable()
     {
         _speed = 60;
+        Invoke("Kill", 10f);
     }
 
     public void OnDisable()
@@ -16,7 +17,7 @@ public class ProjectileArrow : GenericProjectile
     public override void SetOnLived(Vector2 direction, string player)
     {
         _player = player;
-        GetComponent<Rigidbody2D>().velocity = direction*_speed;
+        GetComponent<Rigidbody2D>().velocity = direction * _speed;
     }
 
     void OnTriggerEnter2D(Collider2D c)

@@ -9,7 +9,7 @@ public class PlayerWarrior : GenericPlayer
     void Awake()
     {
         _speed      = 20f;
-        _projectile = 2;
+        _projectile = 1;
         _canAttack  = new Timer(0.5f);
     }
 
