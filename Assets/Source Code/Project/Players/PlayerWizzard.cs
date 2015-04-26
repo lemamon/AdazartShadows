@@ -6,7 +6,8 @@ public class PlayerWizzard : GenericPlayer
 {
     private Timer timer;
     private bool  action = true;
-    
+    private string _status = "";
+
     void Awake()
     {
         _projectile = 2;
@@ -22,7 +23,7 @@ public class PlayerWizzard : GenericPlayer
             if (time > 2) time = 2;
             _facadePlayer.SpawProjectile(new Vector2(direction[0] * (time * 50), direction[1]) * (time * 50));
             action = true;
-            return null;//anim atack
+            return "Attack";//anim atack
         }
         else
         {
@@ -54,6 +55,18 @@ public class PlayerWizzard : GenericPlayer
         if (c.gameObject.tag == "")
         {
             gameObject.SetActive(false);
+        }
+    }
+    void OnTriggerEnter2D(Collider2D c)
+    {
+        if (_status != "Dead")
+        {
+            if (c.CompareTag("Projectile") && c.GetComponent<GenericProjectile>().GetPlayer() != _facadePlayer.GetPlayer())
+            {
+                _status = "Dead";
+                _facadePlayer.Kill();
+                Destroy(gameObject);
+            }
         }
     }
 }

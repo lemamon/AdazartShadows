@@ -12,9 +12,9 @@ public class FacadePlayer
     private Rigidbody2D       _rigidbody2D;
     private string            _player;
 
-    public FacadePlayer()
+    public FacadePlayer(string player)
     {
-        _genericPlayer     = Factory.InstancePlayer(2);
+        _genericPlayer     = Factory.InstancePlayer(3);
         _projectile        = Factory.FindProjectile(_genericPlayer.GetProjectile());
         _gameObject        = _genericPlayer.gameObject;
         _rigidbody2D       = _gameObject.GetComponent<Rigidbody2D>();
