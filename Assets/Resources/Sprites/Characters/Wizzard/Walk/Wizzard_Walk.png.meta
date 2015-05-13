@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: b9710776693eafc46a27e7ca2a8c3616
-timeCreated: 1428444492
+timeCreated: 1431378304
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -64,60 +64,40 @@ TextureImporter:
     - name: Wizzard_Walk_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 98
-        width: 606
-        height: 986
+        x: 52
+        y: 28
+        width: 86
+        height: 242
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Wizzard_Walk_1
       rect:
         serializedVersion: 2
-        x: 731
-        y: 98
-        width: 595
-        height: 981
+        x: 255
+        y: 27
+        width: 84
+        height: 245
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Wizzard_Walk_2
       rect:
         serializedVersion: 2
-        x: 1503
-        y: 88
-        width: 597
-        height: 978
+        x: 426
+        y: 25
+        width: 84
+        height: 243
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Wizzard_Walk_3
       rect:
         serializedVersion: 2
-        x: 2155
-        y: 39
-        width: 595
-        height: 979
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Wizzard_Walk_4
-      rect:
-        serializedVersion: 2
-        x: 2967
-        y: 1
-        width: 609
-        height: 989
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Wizzard_Walk_5
-      rect:
-        serializedVersion: 2
-        x: 3787
-        y: 0
-        width: 533
-        height: 994
+        x: 589
+        y: 26
+        width: 84
+        height: 251
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

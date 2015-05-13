@@ -14,7 +14,7 @@ public class FacadePlayer
 
     public FacadePlayer(string player, int aux)//<<<<<<<<<<<<<<<<<<<<<<
     {
-        _genericPlayer     = Factory.InstancePlayer(aux);
+        _genericPlayer     = Factory.InstancePlayer(aux,player);
         _projectile        = Factory.FindProjectile(_genericPlayer.GetProjectile());
         _gameObject        = _genericPlayer.gameObject;
         _rigidbody2D       = _gameObject.GetComponent<Rigidbody2D>();
@@ -67,7 +67,7 @@ public class FacadePlayer
         if (_genericPlayer.CanJump() && _controllerPlayer.IsGrounded())
         {
             _genericAnimator.Play("Jump");
-            _genericMovement.Push(Vector2.up*6000);
+            _genericMovement.Push(Vector2.up*4000);
         }
     }
     public void JumpOut()
@@ -78,6 +78,7 @@ public class FacadePlayer
                 _genericMovement.Move(Vector2.right * _rigidbody2D.velocity.x);
             }
     }
+    
     public void SpawProjectile(Vector2 direction)
     {
 
@@ -102,7 +103,7 @@ public class FacadePlayer
         projectile.transform.eulerAngles = new Vector3(0, 0, auy);
         //Gambiarra show
         #endregion Gambiarra
-        projectile.GetComponent<GenericProjectile>().SetOnLived(direction,_player);
+        projectile.GetComponent<GenericProjectile>().SetOnLived(direction,_player, _gameObject.transform);
 
     }
 
@@ -113,8 +114,13 @@ public class FacadePlayer
 
     public void Kill()
     {
-        _genericAnimator.Play("Dead");
+        _genericAnimator.Play("Death");
         _genericMovement.Move(new Vector2(0, 0));
-        _gameObject.SetActive(false);
+        _genericMovement = null;
+        _genericAnimator = null;
+        _rigidbody2D.isKinematic = true;
+        _gameObject.tag = "Untagged";
+        _genericPlayer = null;
+        //_gameObject.SetActive(false);
     }
 }

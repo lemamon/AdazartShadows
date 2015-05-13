@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: c46b296f1e600d64aa7a07fe90005395
-timeCreated: 1428444429
+timeCreated: 1431378274
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -12,6 +12,7 @@ TextureImporter:
     21300010: Wizzard_Idle_1
     21300012: Wizzard_Idle_2
     21300014: Wizzard_Idle_3
+    21300016: Wizzard_Idle_4
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -60,40 +61,50 @@ TextureImporter:
     - name: Wizzard_Idle_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 78
-        width: 558
-        height: 976
+        x: 78
+        y: 30
+        width: 84
+        height: 243
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Wizzard_Idle_1
       rect:
         serializedVersion: 2
-        x: 680
-        y: 62
-        width: 560
-        height: 948
+        x: 255
+        y: 30
+        width: 84
+        height: 237
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Wizzard_Idle_2
       rect:
         serializedVersion: 2
-        x: 1429
-        y: 0
-        width: 560
-        height: 977
+        x: 414
+        y: 30
+        width: 84
+        height: 232
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Wizzard_Idle_3
       rect:
         serializedVersion: 2
-        x: 2188
-        y: 0
-        width: 558
-        height: 994
+        x: 569
+        y: 30
+        width: 84
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Wizzard_Idle_4
+      rect:
+        serializedVersion: 2
+        x: 741
+        y: 30
+        width: 84
+        height: 243
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

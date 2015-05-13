@@ -6,7 +6,7 @@ public class ProjectileSword : GenericProjectile
 
     public void OnEnable()
     {
-        Invoke("Kill", 0.2f);
+        Invoke("Kill", 0.3f);
     }
 
     public void Kill()
@@ -14,8 +14,9 @@ public class ProjectileSword : GenericProjectile
         gameObject.Recycle();
     }
 
-    public override void SetOnLived(Vector2 direction, string player)
+    public override void SetOnLived(Vector2 direction, string player, Transform father)
     {
+        transform.parent = father;
         _player = player;
     }
 }

@@ -23,10 +23,10 @@ public class GenericAnimator
     }
 
     public void IsFacedRight(bool isFacedRight)
-    {
+    {//Corrigir>>
         if(isFacedRight)
-            _transform.localScale = new Vector3(1, 1, 1);
+            _transform.localScale = new Vector3(Mathf.Abs(_transform.localScale.x), _transform.localScale.y, _transform.localScale.z);
         else
-            _transform.localScale = new Vector3(-1, 1, 1);
-    }
+            _transform.localScale = new Vector3(-Mathf.Abs(_transform.localScale.x), _transform.localScale.y, _transform.localScale.z);
+    }//<<
 }

@@ -1,0 +1,352 @@
+fileFormatVersion: 2
+guid: fbe2f1d0d1f288e489ddd4dc901a4686
+timeCreated: 1431463457
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Warrior_Death 770x657_0
+    21300002: Warrior_Death 770x657_1
+    21300004: Warrior_Death 770x657_2
+    21300006: Warrior_Death 770x657_3
+    21300008: Warrior_Death 770x657_4
+    21300010: Warrior_Death 770x657_5
+    21300012: Warrior_Death 770x657_6
+    21300014: Warrior_Death 770x657_7
+    21300016: Warrior_Death 770x657_8
+    21300018: Warrior_Death 770x657_9
+    21300020: Warrior_Death 770x657_10
+    21300022: Warrior_Death 770x657_11
+    21300024: Warrior_Death 770x657_12
+    21300026: Warrior_Death 770x657_13
+    21300028: Warrior_Death 770x657_14
+    21300030: Warrior_Death 770x657_15
+    21300032: Warrior_Death 770x657_16
+    21300034: Warrior_Death 770x657_17
+    21300036: Warrior_Death 770x657_18
+    21300038: Warrior_Death 770x657_19
+    21300040: Warrior_Death 770x657_20
+    21300042: Warrior_Death 770x657_21
+    21300044: Warrior_Death 770x657_22
+    21300046: Warrior_Death 770x657_23
+    21300048: Warrior_Death 770x657_24
+    21300050: Warrior_Death 770x657_25
+    21300052: Warrior_Death 770x657_26
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 2
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Warrior_Death 770x657_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3286
+        width: 770
+        height: 657
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Warrior_Death 770x657_1
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 3286
+        width: 770
+        height: 657
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Warrior_Death 770x657_2
+      rect:
+        serializedVersion: 2
+        x: 1540
+        y: 3286
+        width: 770
+        height: 657
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Warrior_Death 770x657_3
+      rect:
+        serializedVersion: 2
+        x: 2310
+        y: 3286
+        width: 770
+        height: 657
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Warrior_Death 770x657_4
+      rect:
+        serializedVersion: 2
+        x: 3080
+        y: 3286
+        width: 770
+        height: 657
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Warrior_Death 770x657_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2629
+        width: 770
+        height: 657
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Warrior_Death 770x657_6
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 2629
+        width: 770
+        height: 657
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Warrior_Death 770x657_7
+      rect:
+        serializedVersion: 2
+        x: 1540
+        y: 2629
+        width: 770
+        height: 657
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Warrior_Death 770x657_8
+      rect:
+        serializedVersion: 2
+        x: 2310
+        y: 2629
+        width: 770
+        height: 657
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Warrior_Death 770x657_9
+      rect:
+        serializedVersion: 2
+        x: 3080
+        y: 2629
+        width: 770
+        height: 657
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Warrior_Death 770x657_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1972
+        width: 770
+        height: 657
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Warrior_Death 770x657_11
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 1972
+        width: 770
+        height: 657
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Warrior_Death 770x657_12
+      rect:
+        serializedVersion: 2
+        x: 1540
+        y: 1972
+        width: 770
+        height: 657
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Warrior_Death 770x657_13
+      rect:
+        serializedVersion: 2
+        x: 2310
+        y: 1972
+        width: 770
+        height: 657
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Warrior_Death 770x657_14
+      rect:
+        serializedVersion: 2
+        x: 3080
+        y: 1972
+        width: 770
+        height: 657
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Warrior_Death 770x657_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1315
+        width: 770
+        height: 657
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Warrior_Death 770x657_16
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 1315
+        width: 770
+        height: 657
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Warrior_Death 770x657_17
+      rect:
+        serializedVersion: 2
+        x: 1540
+        y: 1315
+        width: 770
+        height: 657
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Warrior_Death 770x657_18
+      rect:
+        serializedVersion: 2
+        x: 2310
+        y: 1315
+        width: 770
+        height: 657
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Warrior_Death 770x657_19
+      rect:
+        serializedVersion: 2
+        x: 3080
+        y: 1315
+        width: 770
+        height: 657
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Warrior_Death 770x657_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 658
+        width: 770
+        height: 657
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Warrior_Death 770x657_21
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 658
+        width: 770
+        height: 657
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Warrior_Death 770x657_22
+      rect:
+        serializedVersion: 2
+        x: 1540
+        y: 658
+        width: 770
+        height: 657
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Warrior_Death 770x657_23
+      rect:
+        serializedVersion: 2
+        x: 2310
+        y: 658
+        width: 770
+        height: 657
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Warrior_Death 770x657_24
+      rect:
+        serializedVersion: 2
+        x: 3080
+        y: 658
+        width: 770
+        height: 657
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Warrior_Death 770x657_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1
+        width: 770
+        height: 657
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Warrior_Death 770x657_26
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 1
+        width: 770
+        height: 657
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
