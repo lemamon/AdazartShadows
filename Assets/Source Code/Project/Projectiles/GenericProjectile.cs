@@ -14,5 +14,5 @@ public abstract class GenericProjectile : MonoBehaviour
         return _player;
     }
 
-    public abstract void SetOnLived(Vector2 direction, string player);
+    public abstract void SetOnLived(Vector2 direction, string player, Transform father);
 }

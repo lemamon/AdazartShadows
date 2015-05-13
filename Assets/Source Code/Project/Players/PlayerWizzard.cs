@@ -1,62 +1,47 @@
 ﻿
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class PlayerWizzard : GenericPlayer
 {
-    private Timer timer;
-    private bool  action = true;
-    private string _status = "";
-
+    private string _status;
+    private List<Timer> _canAttack = new List<Timer>();
     void Awake()
     {
-        _projectile = 2;
-        _speed = 20;
-    }
+        _speed = 30f;
+        _projectile = 3;
+        _canAttack.Add(new Timer(-3f));
+        _canAttack.Add(new Timer(-3f));
+        _canAttack.Add(new Timer(-3f));
 
+    }
     public override string Action1(float time, int[] direction)
-    {
-        Debug.Log(time);
-        if (time > 0)
+    {//Corrigir>>
+        if (direction[0] == 0 && direction[1] == 0)
+            direction[0] = (int)transform.localScale.x/3;
+
+        if (_canAttack[0].GetTime() >= 3f)
         {
-            
-            if (time > 2) time = 2;
-            _facadePlayer.SpawProjectile(new Vector2(direction[0] * (time * 50), direction[1]) * (time * 50));
-            action = true;
-            return "Attack";//anim atack
+            _canAttack[0].Reset();
+            _facadePlayer.SpawProjectile(new Vector2(direction[0], direction[1]));
+            return "Attack";
         }
-        else
+        else if (_canAttack[1].GetTime() >= 3f)
         {
-            return null;//anim load
+            _canAttack[1].Reset();
+            _facadePlayer.SpawProjectile(new Vector2(direction[0], direction[1]));
+            return "Attack";
         }
-    }
-
-    public override string Action2(float time, int[] direction)
-    {
-        if (time > 0)
-            action = false;
-        else
-            action = true;
-        return "ss";
-    }
-
-    public override bool CanJump()
-    {
-        return action;
-    }
-
-    public override bool CanMove()
-    {
-        return action;
-    }
-
-    void OnCollisionEnter2D(Collision2D c)
-    {
-        if (c.gameObject.tag == "")
+        else if (_canAttack[2].GetTime() >= 3f)
         {
-            gameObject.SetActive(false);
+            _canAttack[2].Reset();
+            _facadePlayer.SpawProjectile(new Vector2(direction[0], direction[1]));
+            return "Attack";
         }
-    }
+        return null;
+    }//<<
+
     void OnTriggerEnter2D(Collider2D c)
     {
         if (_status != "Dead")
@@ -65,8 +50,23 @@ public class PlayerWizzard : GenericPlayer
             {
                 _status = "Dead";
                 _facadePlayer.Kill();
-                Destroy(gameObject);
             }
         }
+    }
+
+    public override string Action2(float time, int[] direction)
+    {
+
+        return null;
+    }
+
+    public override bool CanJump()
+    {
+        return true;
+    }
+
+    public override bool CanMove()
+    {
+        return true;
     }
 }

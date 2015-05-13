@@ -7,22 +7,22 @@ public class Factory
     {
 
     }
-    public static GenericPlayer InstancePlayer(int opt)
+    public static GenericPlayer InstancePlayer(int opt, string name)
     {
         GameObject character;
         switch(opt)
         {
             case 1:
                 character = GameObject.Instantiate(Resources.Load("Prefabs/Characters/Warrior", typeof(GameObject))) as GameObject;
-                character.name = "Warrior";
+                character.name = name;
                 return character.AddComponent<PlayerWarrior>();
             case 2:
                 character = GameObject.Instantiate(Resources.Load("Prefabs/Characters/Archer", typeof(GameObject))) as GameObject;
-                character.name = "Archer";
+                character.name = name;
                 return character.AddComponent<PlayerArcher>();
             case 3:
                 character = GameObject.Instantiate(Resources.Load("Prefabs/Characters/Wizzard", typeof(GameObject))) as GameObject;
-                character.name = "Wizzard";
+                character.name = name;
                 return character.AddComponent<PlayerWizzard>();
             default:
                 return null;

@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 274042cbbdb751a44b16268c0a60585e
-timeCreated: 1428608137
+timeCreated: 1431378291
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -12,6 +12,7 @@ TextureImporter:
     21300010: Wizzard_Jump_1
     21300012: Wizzard_Jump_2
     21300014: Wizzard_Jump_3
+    21300016: Wizzard_Jump_4
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -60,42 +61,52 @@ TextureImporter:
     - name: Wizzard_Jump_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 24
-        width: 502
-        height: 987
+        x: 72
+        y: 19
+        width: 92
+        height: 236
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Wizzard_Jump_1
       rect:
         serializedVersion: 2
-        x: 756
-        y: 51
-        width: 569
-        height: 986
+        x: 224
+        y: 45
+        width: 82
+        height: 234
       alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Wizzard_Jump_3
-      rect:
-        serializedVersion: 2
-        x: 2262
-        y: 42
-        width: 535
-        height: 995
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Wizzard_Jump_2
       rect:
         serializedVersion: 2
-        x: 1501
-        y: 2
-        width: 569
-        height: 986
+        x: 391
+        y: 70
+        width: 92
+        height: 215
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Wizzard_Jump_3
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 39
+        width: 82
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Wizzard_Jump_4
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 19
+        width: 92
+        height: 236
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
