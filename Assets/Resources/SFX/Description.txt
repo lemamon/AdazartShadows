@@ -1,0 +1,46 @@
+Folder: Ambience
+
+Name: ambience_cave_distant_dripping-001.wav
+Description: Sons de caverna para ambientação;
+
+Name: ambience_cave_hollow_dripping-001.wav
+Description: Sons de caverna para ambientação, com um tom mais sombrio;
+---------------------------------------------------
+Folder: Archer
+
+Name: Archer_Attack_long.wav
+Description: Sons de flecha longo, como se fosse atirado a longe;
+
+Name: Archer_Attack_small.wav
+Description: Sons de flecha curto, interrompido logo;
+---------------------------------------------------
+Folder: Menu
+
+Name: Change_Char.wav
+Description: Som para a troca de personagens no menu de seleção e escolha do mesmo;
+
+Name: Menu_Select_Item.wav
+Description: Som de seleção de cada intem do menu;
+---------------------------------------------------
+Folder: Wizzard
+
+Name: Wizzard_Attack_Collision.wav
+Description: Som para ataque do mago em colisão, som de uma explosão;
+
+Name: Wizzard_Attack_NotCollision.wav
+Description: Som para ataque do mago quando não há colisão;
+---------------------------------------------------
+Folder: Worrior
+
+Name: Worrior_Attack_Collision.wav
+Description: Som para ataque do guerreiro em colisão, som de lamina atigindo;
+
+Name: Worrior_Attack_counterblow.wav
+Description: Som de rebatida, para quando o guerreiro rebater um ataque;
+
+Name: Worrior_Attack_NotCollision.wav
+Description: Som para ataque do guerreiro quando não há colisão;
+
+Name: Worrior_blade.wav
+Description: Som de arrastando;
+
