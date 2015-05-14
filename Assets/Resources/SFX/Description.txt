@@ -43,4 +43,8 @@ Description: Som para ataque do guerreiro quando não há colisão;
 
 Name: Worrior_blade.wav
 Description: Som de arrastando;
+---------------------------------------------------
+Folder: Cammon
 
+Name: Jump.wav
+Description: Som para pulo comum a todos os personagens;
