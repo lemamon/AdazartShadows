@@ -6,9 +6,9 @@ public class GenericSceneManager : MonoBehaviour
     int[] _aux = new int[3];
     public void Awake()
     {
-        _aux[0] = 1;
-        _aux[1] = 2;
-        _aux[2] = 3;
+        _aux[0] = PlayerPrefs.GetInt("1")+1;
+        _aux[1] = PlayerPrefs.GetInt("2")+1;
+        _aux[2] = PlayerPrefs.GetInt("3")+1;
         Begin(_aux);
     }
     public void Begin(int[] players)

@@ -43,9 +43,9 @@ public class ChooseCaracterPlayer1 : MonoBehaviour {
             ChangeCaracterLeft();
             Invoke("DelayLeft", 0.5f);
         }
-        if (Input.GetAxis("Player" + playerNumber + "_Submit") < 0 && selected)
+        if (Input.GetKey(KeyCode.Space) && selected)
         {
-            Debug.Log("selected!!");
+            Application.LoadLevel("Game");
             selected = false;
             Invoke("DelaySelected", 0.5f);
         }
@@ -72,6 +72,7 @@ public class ChooseCaracterPlayer1 : MonoBehaviour {
             aux = 0;
         shadowImage.sprite = shadows[aux];
         shadowText.text = shadowTextVector[aux];
+        PlayerPrefs.SetInt(playerNumber.ToString(),aux);
     }
 
     public void ChangeCaracterLeft()
@@ -81,6 +82,7 @@ public class ChooseCaracterPlayer1 : MonoBehaviour {
             aux = 2;
         shadowImage.sprite = shadows[aux];
         shadowText.text = shadowTextVector[aux];
+        PlayerPrefs.SetInt(playerNumber.ToString(), aux);
     }
 }
 
