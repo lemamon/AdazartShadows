@@ -14,6 +14,7 @@ public class FacadePlayer
 
     public FacadePlayer(string player, int aux)//<<<<<<<<<<<<<<<<<<<<<<
     {
+        Vector3 pos = GameObject.Find(player).transform.position;
         _genericPlayer     = Factory.InstancePlayer(aux,player);
         _projectile        = Factory.FindProjectile(_genericPlayer.GetProjectile());
         _gameObject        = _genericPlayer.gameObject;
@@ -22,31 +23,35 @@ public class FacadePlayer
         _genericMovement   = new GenericMovement(_gameObject);
         _controllerPlayer  = new ControllerPlayer(_gameObject);
         _player            = player;
+        _genericPlayer.transform.position = pos;
 
         _genericPlayer.SetFacadePlayer(this);
     }
     public void MoveToDirection(int[] directions)//X and Y directions
     {
-        if(_genericPlayer.CanMove())
+        if (_genericMovement != null)
         {
-            switch(directions[0])//just moves X direction
+            if (_genericPlayer.CanMove())
             {
-                case -1://Left
-                    _genericMovement.Move(new Vector2(-_genericPlayer.GetSpeed(), _rigidbody2D.velocity.y));
-                    _genericAnimator.IsFacedRight(false);
-                    if (_controllerPlayer.IsGrounded())
-                        _genericAnimator.Play("Walk");
-                    break;
-                case  1://Right
-                    _genericMovement.Move(new Vector2(_genericPlayer.GetSpeed(), _rigidbody2D.velocity.y));
-                    _genericAnimator.IsFacedRight(true);
-                    if (_controllerPlayer.IsGrounded())
-                        _genericAnimator.Play("Walk");
-                    break;
-                default://Both or Neither
-                    _genericMovement.Move(new Vector2(0, _rigidbody2D.velocity.y));
-                    _genericAnimator.Play("Idle");
-                    break;
+                switch (directions[0])//just moves X direction
+                {
+                    case -1://Left
+                        _genericMovement.Move(new Vector2(-_genericPlayer.GetSpeed(), _rigidbody2D.velocity.y));
+                        _genericAnimator.IsFacedRight(false);
+                        if (_controllerPlayer.IsGrounded())
+                            _genericAnimator.Play("Walk");
+                        break;
+                    case 1://Right
+                        _genericMovement.Move(new Vector2(_genericPlayer.GetSpeed(), _rigidbody2D.velocity.y));
+                        _genericAnimator.IsFacedRight(true);
+                        if (_controllerPlayer.IsGrounded())
+                            _genericAnimator.Play("Walk");
+                        break;
+                    default://Both or Neither
+                        _genericMovement.Move(new Vector2(0, _rigidbody2D.velocity.y));
+                        _genericAnimator.Play("Idle");
+                        break;
+                }
             }
         }
     }

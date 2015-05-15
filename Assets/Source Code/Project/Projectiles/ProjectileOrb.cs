@@ -3,6 +3,13 @@ using System.Collections;
 
 public class ProjectileOrb : GenericProjectile
 {
+    private AudioSource[] _aud;
+
+    public void Awake()
+    {
+        _aud = GetComponents<AudioSource>();
+    }
+
     public void OnEnable()
     {
         _speed = 50;
@@ -24,13 +31,19 @@ public class ProjectileOrb : GenericProjectile
     {
         try
         {
-            if (c.CompareTag("Ground"))
+            if(c == null)
             {
+                _aud[1].Play();
+                Kill();
+            }
+            else if (c.CompareTag("Ground"))
+            {
+                _aud[1].Play();
                 Kill();
             }
             else if (c.CompareTag("Player") && c.name != _player)
             {
-
+                _aud[0].Play();
                 Kill();
             }
             else if (c.CompareTag("Projectile") && c.GetComponent<GenericProjectile>().GetPlayer() != _player)

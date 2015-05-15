@@ -10,7 +10,7 @@ public class GenericGamepad : MonoBehaviour
     public string        _player;//<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
     public int _aux;//<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
-    void Awake()
+    public void Awake1()
     {
         _action1      = new Timer();
         _action2      = new Timer();

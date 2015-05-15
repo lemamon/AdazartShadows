@@ -1,0 +1,341 @@
+fileFormatVersion: 2
+guid: d77e1dda1beef9841bcfb610fed808fc
+timeCreated: 1431637942
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Wizzard_Death_0
+    21300002: Wizzard_Death_1
+    21300004: Wizzard_Death_2
+    21300006: Wizzard_Death_3
+    21300008: Wizzard_Death_4
+    21300010: Wizzard_Death_5
+    21300012: Wizzard_Death_6
+    21300014: Wizzard_Death_7
+    21300016: Wizzard_Death_8
+    21300018: Wizzard_Death_9
+    21300020: Wizzard_Death_10
+    21300022: Wizzard_Death_11
+    21300024: Wizzard_Death_12
+    21300026: Wizzard_Death_13
+    21300028: Wizzard_Death_14
+    21300030: Wizzard_Death_15
+    21300032: Wizzard_Death_16
+    21300034: Wizzard_Death_17
+    21300036: Wizzard_Death_18
+    21300038: Wizzard_Death_19
+    21300040: Wizzard_Death_20
+    21300042: Wizzard_Death_21
+    21300044: Wizzard_Death_22
+    21300046: Wizzard_Death_23
+    21300048: Wizzard_Death_24
+    21300050: Wizzard_Death_25
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Wizzard_Death_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1477
+        width: 308
+        height: 295
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Wizzard_Death_1
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 1477
+        width: 308
+        height: 295
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Wizzard_Death_2
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 1477
+        width: 308
+        height: 295
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Wizzard_Death_3
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 1477
+        width: 308
+        height: 295
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Wizzard_Death_4
+      rect:
+        serializedVersion: 2
+        x: 1232
+        y: 1477
+        width: 308
+        height: 295
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Wizzard_Death_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1182
+        width: 308
+        height: 295
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Wizzard_Death_6
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 1182
+        width: 308
+        height: 295
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Wizzard_Death_7
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 1182
+        width: 308
+        height: 295
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Wizzard_Death_8
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 1182
+        width: 308
+        height: 295
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Wizzard_Death_9
+      rect:
+        serializedVersion: 2
+        x: 1232
+        y: 1182
+        width: 308
+        height: 295
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Wizzard_Death_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 887
+        width: 308
+        height: 295
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Wizzard_Death_11
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 887
+        width: 308
+        height: 295
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Wizzard_Death_12
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 887
+        width: 308
+        height: 295
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Wizzard_Death_13
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 887
+        width: 308
+        height: 295
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Wizzard_Death_14
+      rect:
+        serializedVersion: 2
+        x: 1232
+        y: 887
+        width: 308
+        height: 295
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Wizzard_Death_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 592
+        width: 308
+        height: 295
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Wizzard_Death_16
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 592
+        width: 308
+        height: 295
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Wizzard_Death_17
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 592
+        width: 308
+        height: 295
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Wizzard_Death_18
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 592
+        width: 308
+        height: 295
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Wizzard_Death_19
+      rect:
+        serializedVersion: 2
+        x: 1232
+        y: 592
+        width: 308
+        height: 295
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Wizzard_Death_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 297
+        width: 308
+        height: 295
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Wizzard_Death_21
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 297
+        width: 308
+        height: 295
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Wizzard_Death_22
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 297
+        width: 308
+        height: 295
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Wizzard_Death_23
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 297
+        width: 308
+        height: 295
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Wizzard_Death_24
+      rect:
+        serializedVersion: 2
+        x: 1232
+        y: 297
+        width: 308
+        height: 295
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Wizzard_Death_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2
+        width: 308
+        height: 295
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -3,9 +3,17 @@ using System.Collections;
 
 public class ProjectileArrow : GenericProjectile
 {
+    private AudioSource[] _aud;
+    
+    public void Awake()
+    {
+        _aud = GetComponents<AudioSource>();
+    }
+
     public void OnEnable()
     {
         _speed = 50;
+        _aud[1].Play();
     }
 
     public void OnDisable()
