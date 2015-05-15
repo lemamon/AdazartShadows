@@ -17,7 +17,7 @@ public class PopUpsController : MonoBehaviour {
         choosePopUp   = GameObject.Find("CanvasChooseCharacter");
         creditPopUp   = GameObject.Find("CanvasCredits");
         settingsPopUp = GameObject.Find("CanvasSettings");
-        btMenu = btStart.GetComponent<Animator>();
+        //btMenu = btStart.GetComponent<Animator>();
         
         EventSystem.current.firstSelectedGameObject = btStart;
         choosePopUp.SetActive(false);
@@ -33,7 +33,7 @@ public class PopUpsController : MonoBehaviour {
             mods[1].submitButton = "Player2_Submit";
             mods[2].submitButton = "Player3_Submit";
             EventSystem.current.firstSelectedGameObject = btStart;
-            btMenu.SetTrigger("Restart");
+           // btMenu.SetTrigger("Restart");
             menuPopup.SetActive(true);
             choosePopUp.SetActive(false);
             creditPopUp.SetActive(false);
