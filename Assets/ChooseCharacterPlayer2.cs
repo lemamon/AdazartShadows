@@ -15,8 +15,8 @@ public class ChooseCharacterPlayer2 : MonoBehaviour {
     SpriteRenderer shadowImage;
 
     void Start () {
-        shadowTextVector = new string[] { "Archer", "Warrior", "Wizard" };
-        shadows = new Sprite[] { archer ,warrior,wizard};
+        shadowTextVector = new string[] {"Warrior","Archer", "Wizard" };
+        shadows = new Sprite[] { warrior, archer,wizard };
         shadowImage = GameObject.Find("ShadowImage2").GetComponent<SpriteRenderer>();
         shadowName = GameObject.Find("ShadowText2");
         shadowText  = shadowName.GetComponent<Text>();
@@ -49,7 +49,11 @@ public class ChooseCharacterPlayer2 : MonoBehaviour {
         }
 
         if (Input.GetAxis("Player2_Fire1") > 0)
+        {
             selected_player2 = true;
+            PlayerPrefs.SetInt("character2", aux);
+        }
+            
         if (Input.GetAxis("Player2_Fire2") > 0)
             selected_player2 = false;
     }
