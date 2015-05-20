@@ -32,7 +32,8 @@ public class PopUpsController : MonoBehaviour {
     
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) || (Input.GetAxis("Player2_Fire1") > 0 && player2.selected_player2) || (Input.GetAxis("Player3_Fire1") > 0 && player3.selected_player3))
+        //if (Input.GetKeyDown(KeyCode.Escape) || (Input.GetAxis("Player2_Fire1") > 0 && player2.selected_player2) || (Input.GetAxis("Player3_Fire1") > 0 && player3.selected_player3))
+        if (Input.GetKeyDown(KeyCode.Escape) )
         {
             mods[0].submitButton = "Player1_Submit";
             mods[1].submitButton = "Player2_Submit";
