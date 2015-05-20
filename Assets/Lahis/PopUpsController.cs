@@ -7,9 +7,13 @@ public class PopUpsController : MonoBehaviour {
     Animator btMenu;
     StandaloneInputModule[] mods;
     GameObject settingsPopUp, choosePopUp, creditPopUp, menuPopup, btStart, btArrow;
+    ChooseCharacterPlayer2 player2;
+    ChooseCharacterPlayer3 player3;
 
     void Start()
     {
+        player2 = GameObject.Find("Player2").GetComponent<ChooseCharacterPlayer2>();
+        player3 = GameObject.Find("Player2").GetComponent<ChooseCharacterPlayer3>();
         mods          = EventSystem.current.GetComponentsInChildren<StandaloneInputModule>();
         btStart       = GameObject.Find("ButtonStart");
         btArrow       = GameObject.Find("ArrowRight1Button");
@@ -28,7 +32,8 @@ public class PopUpsController : MonoBehaviour {
     
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape)){
+        if (Input.GetKeyDown(KeyCode.Escape) || (Input.GetAxis("Player2_Fire1") > 0 && player2.selected_player2) || (Input.GetAxis("Player3_Fire1") > 0 && player3.selected_player3))
+        {
             mods[0].submitButton = "Player1_Submit";
             mods[1].submitButton = "Player2_Submit";
             mods[2].submitButton = "Player3_Submit";

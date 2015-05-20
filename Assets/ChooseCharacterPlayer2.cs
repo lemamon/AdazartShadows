@@ -3,10 +3,10 @@ using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.EventSystems;
 
-public class ChooseCaracterPlayer1 : MonoBehaviour {
+public class ChooseCharacterPlayer2 : MonoBehaviour {
     int aux;
     bool right, left;
-    public bool selected_player1;
+    public bool selected_player2;
     public Sprite archer, warrior, wizard;
     string[] shadowTextVector;
     Text shadowText;
@@ -17,30 +17,30 @@ public class ChooseCaracterPlayer1 : MonoBehaviour {
     void Start () {
         shadowTextVector = new string[] { "Archer", "Warrior", "Wizard" };
         shadows = new Sprite[] { archer ,warrior,wizard};
-        shadowImage = GameObject.Find("ShadowImage1").GetComponent<SpriteRenderer>();
-        shadowName = GameObject.Find("ShadowText1");
+        shadowImage = GameObject.Find("ShadowImage2").GetComponent<SpriteRenderer>();
+        shadowName = GameObject.Find("ShadowText2");
         shadowText  = shadowName.GetComponent<Text>();
         shadowImage.sprite = shadows[0];
         shadowText.text = shadowTextVector[0];
         aux  = 0;
         right = true;
         left = true;
-        selected_player1 = false;
+        selected_player2 = false;
         
     }
 
     void Update()
     {
         //Entradas
-        if (!selected_player1)
+        if (!selected_player2)
         {
-            if (Input.GetAxis("Player1_Horizontal") > 0 && right)
+            if (Input.GetAxis("Player2_Horizontal") > 0 && right)
             {
                 right = false;
                 ChangeCaracterRight();
                 Invoke("DelayRight", 0.5f);
             }
-            if (Input.GetAxis("Player1_Horizontal") < 0 && left)
+            if (Input.GetAxis("Player2_Horizontal") < 0 && left)
             {
                 left = false;
                 ChangeCaracterLeft();
@@ -48,10 +48,10 @@ public class ChooseCaracterPlayer1 : MonoBehaviour {
             }
         }
 
-        if (Input.GetAxis("Player1_Jump") > 0)
-            selected_player1 = true;
-        if (Input.GetKey(KeyCode.Z))
-            selected_player1 = false;
+        if (Input.GetAxis("Player2_Fire1") > 0)
+            selected_player2 = true;
+        if (Input.GetAxis("Player2_Fire2") > 0)
+            selected_player2 = false;
     }
 
     void DelayLeft()
@@ -81,4 +81,5 @@ public class ChooseCaracterPlayer1 : MonoBehaviour {
         shadowText.text = shadowTextVector[aux];
     }
 }
+
 
