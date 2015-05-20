@@ -3,10 +3,11 @@ using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.EventSystems;
 
-public class ChooseCaracterPlayer1 : MonoBehaviour {
+public class ChooseCharacterPlayer3 : MonoBehaviour
+{
     int aux;
     bool right, left;
-    public bool selected_player1;
+    public bool selected_player3;
     public Sprite archer, warrior, wizard;
     string[] shadowTextVector;
     Text shadowText;
@@ -14,33 +15,34 @@ public class ChooseCaracterPlayer1 : MonoBehaviour {
     GameObject shadowName;
     SpriteRenderer shadowImage;
 
-    void Start () {
+    void Start()
+    {
         shadowTextVector = new string[] { "Archer", "Warrior", "Wizard" };
-        shadows = new Sprite[] { archer ,warrior,wizard};
-        shadowImage = GameObject.Find("ShadowImage1").GetComponent<SpriteRenderer>();
-        shadowName = GameObject.Find("ShadowText1");
-        shadowText  = shadowName.GetComponent<Text>();
+        shadows = new Sprite[] { archer, warrior, wizard };
+        shadowImage = GameObject.Find("ShadowImage3").GetComponent<SpriteRenderer>();
+        shadowName = GameObject.Find("ShadowText3");
+        shadowText = shadowName.GetComponent<Text>();
         shadowImage.sprite = shadows[0];
         shadowText.text = shadowTextVector[0];
-        aux  = 0;
+        aux = 0;
         right = true;
         left = true;
-        selected_player1 = false;
-        
+        selected_player3 = false;
+
     }
 
     void Update()
     {
         //Entradas
-        if (!selected_player1)
+        if (!selected_player3)
         {
-            if (Input.GetAxis("Player1_Horizontal") > 0 && right)
+            if (Input.GetAxis("Player3_Horizontal") > 0 && right)
             {
                 right = false;
                 ChangeCaracterRight();
                 Invoke("DelayRight", 0.5f);
             }
-            if (Input.GetAxis("Player1_Horizontal") < 0 && left)
+            if (Input.GetAxis("Player3_Horizontal") < 0 && left)
             {
                 left = false;
                 ChangeCaracterLeft();
@@ -48,10 +50,10 @@ public class ChooseCaracterPlayer1 : MonoBehaviour {
             }
         }
 
-        if (Input.GetAxis("Player1_Jump") > 0)
-            selected_player1 = true;
-        if (Input.GetKey(KeyCode.Z))
-            selected_player1 = false;
+        if (Input.GetAxis("Player3_Fire1") > 0)
+            selected_player3 = true;
+        if (Input.GetAxis("Player3_Fire2") > 0)
+            selected_player3 = false;
     }
 
     void DelayLeft()
@@ -64,9 +66,10 @@ public class ChooseCaracterPlayer1 : MonoBehaviour {
         right = true;
     }
 
-    void ChangeCaracterRight () {
+    void ChangeCaracterRight()
+    {
         aux++;
-        if(aux > 2)
+        if (aux > 2)
             aux = 0;
         shadowImage.sprite = shadows[aux];
         shadowText.text = shadowTextVector[aux];
@@ -81,4 +84,3 @@ public class ChooseCaracterPlayer1 : MonoBehaviour {
         shadowText.text = shadowTextVector[aux];
     }
 }
-
