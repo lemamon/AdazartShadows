@@ -4,16 +4,23 @@ using UnityEngine.EventSystems;
 
 public class PopUpsController : MonoBehaviour {
 
-    Animator btMenu;
     StandaloneInputModule[] mods;
     GameObject settingsPopUp, choosePopUp, creditPopUp, menuPopup, btStart, btArrow;
+    ChooseCharacterPlayer1 player1;
     ChooseCharacterPlayer2 player2;
     ChooseCharacterPlayer3 player3;
+    GameObject mainCamera;
+
 
     void Start()
     {
+        PlayerPrefs.SetInt("player1_results",0);
+        PlayerPrefs.SetInt("player2_results", 0);
+        PlayerPrefs.SetInt("player3_results", 0);
+        player1 = GameObject.Find("Player1").GetComponent<ChooseCharacterPlayer1>();
         player2 = GameObject.Find("Player2").GetComponent<ChooseCharacterPlayer2>();
-        player3 = GameObject.Find("Player2").GetComponent<ChooseCharacterPlayer3>();
+        player3 = GameObject.Find("Player3").GetComponent<ChooseCharacterPlayer3>();
+        mainCamera = GameObject.Find("MainCameraMenu");
         mods          = EventSystem.current.GetComponentsInChildren<StandaloneInputModule>();
         btStart       = GameObject.Find("ButtonStart");
         btArrow       = GameObject.Find("ArrowRight1Button");
@@ -21,8 +28,6 @@ public class PopUpsController : MonoBehaviour {
         choosePopUp   = GameObject.Find("CanvasChooseCharacter");
         creditPopUp   = GameObject.Find("CanvasCredits");
         settingsPopUp = GameObject.Find("CanvasSettings");
-        //btMenu = btStart.GetComponent<Animator>();
-        
         EventSystem.current.firstSelectedGameObject = btStart;
         choosePopUp.SetActive(false);
         creditPopUp.SetActive(false);
@@ -32,19 +37,17 @@ public class PopUpsController : MonoBehaviour {
     
     void Update()
     {
-        //if (Input.GetKeyDown(KeyCode.Escape) || (Input.GetAxis("Player2_Fire1") > 0 && player2.selected_player2) || (Input.GetAxis("Player3_Fire1") > 0 && player3.selected_player3))
-        if (Input.GetKeyDown(KeyCode.Escape) )
+        if (Input.GetKeyDown(KeyCode.Escape) )//Reset
         {
-            mods[0].submitButton = "Player1_Submit";
+            Application.LoadLevel("Menu");
+            /*mods[0].submitButton = "Player1_Submit";
             mods[1].submitButton = "Player2_Submit";
             mods[2].submitButton = "Player3_Submit";
             EventSystem.current.firstSelectedGameObject = btStart;
-           // btMenu.SetTrigger("Restart");
             menuPopup.SetActive(true);
             choosePopUp.SetActive(false);
             creditPopUp.SetActive(false);
-            settingsPopUp.SetActive(false);
-           
+            settingsPopUp.SetActive(false);*/
         }
     }
 
@@ -53,6 +56,7 @@ public class PopUpsController : MonoBehaviour {
         menuPopup.SetActive(false);
         switch (popUp){
             case 0: //start
+                mainCamera.AddComponent<ChangeToGame>();
                choosePopUp.SetActive(true);
                 creditPopUp.SetActive(false);
                 settingsPopUp.SetActive(false); 
@@ -71,7 +75,7 @@ public class PopUpsController : MonoBehaviour {
                 settingsPopUp.SetActive(false); 
                 break;
             case 3: // exit
-                Debug.Log("QUIT");
+                Debug.Log("Quit");
                 Application.Quit();
                 break;
         }

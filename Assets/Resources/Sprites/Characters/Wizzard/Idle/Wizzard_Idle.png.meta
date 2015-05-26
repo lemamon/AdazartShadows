@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: c46b296f1e600d64aa7a07fe90005395
-timeCreated: 1431378274
+timeCreated: 1432213185
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -58,16 +58,6 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: Wizzard_Idle_0
-      rect:
-        serializedVersion: 2
-        x: 78
-        y: 30
-        width: 84
-        height: 243
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
     - name: Wizzard_Idle_1
       rect:
         serializedVersion: 2
@@ -76,7 +66,7 @@ TextureImporter:
         width: 84
         height: 237
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Wizzard_Idle_2
       rect:
@@ -86,7 +76,7 @@ TextureImporter:
         width: 84
         height: 232
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Wizzard_Idle_3
       rect:
@@ -96,7 +86,7 @@ TextureImporter:
         width: 84
         height: 237
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Wizzard_Idle_4
       rect:
@@ -106,7 +96,17 @@ TextureImporter:
         width: 84
         height: 243
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Wizzard_Idle_0
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 0
+        width: 164
+        height: 318
+      alignment: 0
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

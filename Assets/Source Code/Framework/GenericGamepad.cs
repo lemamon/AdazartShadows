@@ -3,11 +3,13 @@ using System.Collections;
 
 public class GenericGamepad : MonoBehaviour
 {
+    public GenericSceneManager _sceneManager;
     private Timer        _action1;
     private Timer        _action2;
     private int[]        _directions;
     private FacadePlayer _facadePlayer;
-    public string        _player;//<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+    public int        _player;//<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+    public string _strPlayer;
     public int _aux;//<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
     public void Awake1()
@@ -16,6 +18,8 @@ public class GenericGamepad : MonoBehaviour
         _action2      = new Timer();
         _directions   = new int[2] {0,0};
         _facadePlayer = new FacadePlayer(_player,_aux);
+        _facadePlayer._sceneManager = _sceneManager;
+        _strPlayer = "Player" + _player;
     }
 
     void Update()
@@ -24,23 +28,23 @@ public class GenericGamepad : MonoBehaviour
         if(Input.anyKeyDown)
         {
             //Some action key down?
-            if (/*Input.GetKeyDown(KeyCode.A) ||*/ Input.GetButtonDown(_player + "_" + "Fire1"))
+            if (/*Input.GetKeyDown(KeyCode.A) ||*/ Input.GetButtonDown(_strPlayer + "_" + "Fire1"))
             { 
                 _action1.Reset();
                 _directions[0] = DirectionX();
                 _directions[1] = DirectionY();
                 _facadePlayer.Action1(_action1.GetTime(),_directions);
             }
-            if (/*Input.GetKeyDown(KeyCode.B) ||*/ Input.GetButtonDown(_player + "_" + "Fire2"))
+            if (/*Input.GetKeyDown(KeyCode.B) ||*/ Input.GetButtonDown(_strPlayer + "_" + "Fire2"))
             {
                 _action2.Reset();
             }
-            if (/*Input.GetKeyDown(KeyCode.Space) ||*/ Input.GetButtonDown(_player + "_" + "Jump"))
+            if (/*Input.GetKeyDown(KeyCode.Space) ||*/ Input.GetButtonDown(_strPlayer + "_" + "Jump"))
             {
                 _facadePlayer.Jump();
             }
         }
-        if (/* Input.GetKeyUp(KeyCode.Space) ||*/ Input.GetButtonUp(_player + "_" + "Jump"))
+        if (/* Input.GetKeyUp(KeyCode.Space) ||*/ Input.GetButtonUp(_strPlayer + "_" + "Jump"))
         {
             _facadePlayer.JumpOut();
         }
@@ -63,7 +67,7 @@ public class GenericGamepad : MonoBehaviour
         //else if (Input.GetKey(KeyCode.RightArrow))
         //    return 1;
         //return 0;
-        return (int)Input.GetAxis(_player + "_" + "Horizontal");
+        return (int)Input.GetAxis(_strPlayer + "_" + "Horizontal");
     }
     private int DirectionY()
     {
@@ -76,6 +80,6 @@ public class GenericGamepad : MonoBehaviour
         //else if (Input.GetKey(KeyCode.UpArrow))
         //    return 1;
         //return 0;
-        return (int)Input.GetAxis(_player + "_" + "Vertical");
+        return (int)Input.GetAxis(_strPlayer + "_" + "Vertical");
     }
 }

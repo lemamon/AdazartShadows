@@ -3,67 +3,65 @@ using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.EventSystems;
 
-public class ChooseCharacterPlayer3 : MonoBehaviour
-{
+public class ChooseCharacterPlayer1 : MonoBehaviour {
+
     int aux;
     public int aux1;
     bool right, left;
-    public bool selected_player3,isAlive;
-    public GameObject pressName;
     public Vector3 scaleImage;
+    public bool selected_player1;
     public Sprite archer, warrior, wizard;
+    public GameObject pressName;
     string[] shadowTextVector;
     Text shadowText, pressText;
     Sprite[] shadows;
     GameObject shadowName;
     public GameObject arrow;
     SpriteRenderer shadowImage;
-    GameObject player3;
+    GameObject player1;
 
-    void Start()
-    {
-        arrow = GameObject.Find("Arrows3");
+    void Start () {
+        arrow = GameObject.Find("Arrows1");
         shadowTextVector = new string[] { "Warrior", "Archer", "Wizard" };
         shadows = new Sprite[] { warrior, archer, wizard };
-        shadowImage = GameObject.Find("ShadowImage3").GetComponent<SpriteRenderer>();
-        shadowName = GameObject.Find("ShadowText3");
-        shadowText = shadowName.GetComponent<Text>();
+        shadowImage = GameObject.Find("ShadowImage1").GetComponent<SpriteRenderer>();
+        shadowName = GameObject.Find("ShadowText1");
+        shadowText  = shadowName.GetComponent<Text>();
         shadowImage.sprite = shadows[0];
         shadowText.text = shadowTextVector[0];
-        player3 = GameObject.Find("Player3");
-        player3.transform.localScale = Vector3.zero;
-        pressName = GameObject.Find("PressText3");
+        player1 = GameObject.Find("Player1");
+        player1.transform.localScale = Vector3.zero;
+        pressName = GameObject.Find("PressText1");
         pressText = pressName.GetComponent<Text>();
-        aux = 0;
+        aux  = 0;
         aux1 = 1;
-        isAlive = false;
         right = true;
         left = true;
-        selected_player3 = false;
-
+        selected_player1 = false;
+        
     }
 
     void Update()
     {
-
-        if (Input.GetKey(KeyCode.Joystick2Button3) && aux1 == 1)
+        //PressKey
+        if (Input.GetKey(KeyCode.X) && aux1 == 1)
         {
-            aux1++;
-            pressName.SetActive(false);
-            player3.transform.localScale = new Vector3(scaleImage.x, scaleImage.y, scaleImage.z);
-            isAlive = true;
+             aux1++;
+             pressName.SetActive(false);
+             player1.transform.localScale = new Vector3(scaleImage.x, scaleImage.y, scaleImage.z);
+            
         }
-        //Entradas
         if(aux1 != 1){
-            if (selected_player3 == false)
+            //Entradas
+            if (!selected_player1)
             {
-                if (Input.GetAxis("Player3_Horizontal") > 0 && right)
+                if (Input.GetAxis("Player1_Horizontal") > 0 && right)
                 {
                     right = false;
                     ChangeCharacterRight();
                     Invoke("DelayRight", 0.5f);
                 }
-                if (Input.GetAxis("Player3_Horizontal") < 0 && left)
+                if (Input.GetAxis("Player1_Horizontal") < 0 && left)
                 {
                     left = false;
                     ChangeCharacterLeft();
@@ -71,19 +69,21 @@ public class ChooseCharacterPlayer3 : MonoBehaviour
                 }
             }
 
-            if (Input.GetAxis("Player3_Fire1") > 0 && aux1!= 1)
+            if (Input.GetAxis("Player1_Jump") > 0 && aux1 != 1)
             {
-                PlayerPrefs.SetInt("character3", aux);
-                selected_player3 = true;
+                PlayerPrefs.SetInt("character1", aux);
+                selected_player1 = true;
                 arrow.SetActive(false);
             }
 
-            if (Input.GetAxis("Player3_Fire2") > 0)
+            if (Input.GetKey(KeyCode.Z))
             {
                 arrow.SetActive(true);
-                selected_player3 = false;
+                selected_player1 = false;
+                /*aux1 = 1;
+                pressName.SetActive(true);
+                player1.transform.localScale = Vector3.zero;*/
             }
-                
         }
         
     }
@@ -98,10 +98,9 @@ public class ChooseCharacterPlayer3 : MonoBehaviour
         right = true;
     }
 
-    void ChangeCharacterRight()
-    {
+    void ChangeCharacterRight () {
         aux++;
-        if (aux > 2)
+        if(aux > 2)
             aux = 0;
         shadowImage.sprite = shadows[aux];
         shadowText.text = shadowTextVector[aux];
@@ -116,3 +115,4 @@ public class ChooseCharacterPlayer3 : MonoBehaviour
         shadowText.text = shadowTextVector[aux];
     }
 }
+

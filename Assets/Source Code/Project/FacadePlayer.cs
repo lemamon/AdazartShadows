@@ -3,6 +3,7 @@ using System.Collections;
 
 public class FacadePlayer
 {
+    public GenericSceneManager _sceneManager;
     private ControllerPlayer  _controllerPlayer;
     private GameObject        _gameObject;
     private GenericAnimator   _genericAnimator;
@@ -11,18 +12,21 @@ public class FacadePlayer
     private GameObject        _projectile;
     private Rigidbody2D       _rigidbody2D;
     private string            _player;
+    private int _id;
 
-    public FacadePlayer(string player, int aux)//<<<<<<<<<<<<<<<<<<<<<<
+    public FacadePlayer(int player, int aux)//<<<<<<<<<<<<<<<<<<<<<<
     {
-        Vector3 pos = GameObject.Find(player).transform.position;
-        _genericPlayer     = Factory.InstancePlayer(aux,player);
+        _id = player;
+        string strPlayer = "Player"+_id;
+        Vector3 pos = GameObject.Find(strPlayer).transform.position;
+        _genericPlayer = Factory.InstancePlayer(aux, strPlayer);
         _projectile        = Factory.FindProjectile(_genericPlayer.GetProjectile());
         _gameObject        = _genericPlayer.gameObject;
         _rigidbody2D       = _gameObject.GetComponent<Rigidbody2D>();
         _genericAnimator   = new GenericAnimator(_gameObject);
         _genericMovement   = new GenericMovement(_gameObject);
         _controllerPlayer  = new ControllerPlayer(_gameObject);
-        _player            = player;
+        _player = strPlayer;
         _genericPlayer.transform.position = pos;
 
         _genericPlayer.SetFacadePlayer(this);
@@ -126,6 +130,7 @@ public class FacadePlayer
         _rigidbody2D.isKinematic = true;
         _gameObject.tag = "Untagged";
         _genericPlayer = null;
+        _sceneManager.End(_id);
         //_gameObject.SetActive(false);
     }
 }
